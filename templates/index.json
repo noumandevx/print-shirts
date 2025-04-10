@@ -1,0 +1,444 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner2_Vxwy66": {
+      "type": "image-banner2",
+      "blocks": {
+        "heading_AEqxkV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Quality T-Shirt Printing",
+            "heading_size": 88,
+            "mob_heading_size": 22,
+            "heading_color": "#ffffff",
+            "heading_spacing": "0px,0px",
+            "mob_heading_spacing": "0px,0px"
+          }
+        },
+        "text_N39DX4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Turn any design into a custom t-shirt. Printed in full color on 100% ring spun cotton for incredible comfort.</p>",
+            "text_style": "body",
+            "color": "#ffffff",
+            "bg_color": "",
+            "text_size": 20,
+            "mob_text_size": 14,
+            "text_spacing": "10px,0px",
+            "mob_text_spacing": "0px,0px",
+            "button_label_1": "QUICK ORDER",
+            "button_link_1": "shopify://collections/quickorder",
+            "button_style_secondary_1": false,
+            "button_label_2": "CUSTOM QUOTE",
+            "button_link_2": "shopify://pages/contact",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_AEqxkV",
+        "text_N39DX4"
+      ],
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/Rectangle_25.png",
+        "bg_fixed": false,
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "container_width": 1152,
+        "desktop_content_alignment": "left",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false,
+        "desktop_spacing": "0px,0px",
+        "mobile_spacing": "0px,0px"
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "cards_slider_zaTf7t": {
+      "type": "cards-slider",
+      "blocks": {
+        "card_9qek4P": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Downloader.la_-6684533303d04_1.png",
+            "heading": "Screen Printing",
+            "text": "Screen printing is a high quality. vibrant & durable print method. It's ideal for designs with limited print colours. The price & minimum order depends on the number of colours in the design & quantity ordered. For the best price per unit, we recommend ordering over 50pcs."
+          }
+        },
+        "card_CLWc46": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Downloader.la_-6684533303d04_1_1.png",
+            "heading": "DTG",
+            "text": "Direct To Garment (DTG) is essentially an inkjet printer for fabric, so it can produce highly detailed, photographic quality prints with a low minimum order of 10 pieces. Although cost-effective for smaller runs, DTG has limitations in garment choice and colour vibrancy."
+          }
+        },
+        "card_aXYzXR": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Downloader.la_-6684533303d04_1_2.png",
+            "heading": "Screen Printing",
+            "text": "Embroidery is a high quality & super durable method of decorating clothing. It's ideal for designs with limited colours. The price varies based on the number of stitches required to reproduce your artwork, which often is dependant on the size of the decoration."
+          }
+        },
+        "card_jehmqW": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Downloader.la_-6684533303d04_1.png",
+            "heading": "Screen Printing",
+            "text": "Screen printing is a high quality. vibrant & durable print method. It's ideal for designs with limited print colours. The price & minimum order depends on the number of colours in the design & quantity ordered. For the best price per unit, we recommend ordering over 50pcs."
+          }
+        },
+        "card_pQ6yaq": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Downloader.la_-6684533303d04_1_1.png",
+            "heading": "DTG",
+            "text": "Direct To Garment (DTG) is essentially an inkjet printer for fabric, so it can produce highly detailed, photographic quality prints with a low minimum order of 10 pieces. Although cost-effective for smaller runs, DTG has limitations in garment choice and colour vibrancy."
+          }
+        }
+      },
+      "block_order": [
+        "card_9qek4P",
+        "card_CLWc46",
+        "card_aXYzXR",
+        "card_jehmqW",
+        "card_pQ6yaq"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_spacing": "120px,50px",
+        "mobile_spacing": "25px,25px"
+      }
+    },
+    "featured_product_MCyTgz": {
+      "type": "featured-product",
+      "blocks": {
+        "title_gn9qqL": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "text_V7eDxK": {
+          "type": "text",
+          "settings": {
+            "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+            "text_style": "body"
+          }
+        },
+        "icon_with_text_pqyLR9": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "heart",
+            "image_1": "shopify://shop_images/Frame_1000005584.png",
+            "heading_1": "Lorem Ipsum",
+            "icon_2": "return",
+            "image_2": "shopify://shop_images/Frame_1000005584_1cdad415-6df9-480a-b16b-5d3cef733271.png",
+            "heading_2": "Lorem Ipsum",
+            "icon_3": "truck",
+            "heading_3": ""
+          }
+        },
+        "icon_with_text_MMgtFC": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "heart",
+            "image_1": "shopify://shop_images/Frame_1000005584.png",
+            "heading_1": "Lorem Ipsum",
+            "icon_2": "return",
+            "image_2": "shopify://shop_images/Frame_1000005584_1cdad415-6df9-480a-b16b-5d3cef733271.png",
+            "heading_2": "Lorem Ipsum",
+            "icon_3": "truck",
+            "heading_3": ""
+          }
+        },
+        "icon_with_text_qdFgt6": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "heart",
+            "image_1": "shopify://shop_images/Frame_1000005584.png",
+            "heading_1": "Lorem Ipsum",
+            "icon_2": "return",
+            "image_2": "shopify://shop_images/Frame_1000005584_1cdad415-6df9-480a-b16b-5d3cef733271.png",
+            "heading_2": "Lorem Ipsum",
+            "icon_3": "truck",
+            "heading_3": ""
+          }
+        },
+        "button_link_JaCkAE": {
+          "type": "button_link",
+          "settings": {
+            "button_text": "Give Me A Quote",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "title_gn9qqL",
+        "text_V7eDxK",
+        "icon_with_text_pqyLR9",
+        "icon_with_text_MMgtFC",
+        "icon_with_text_qdFgt6",
+        "button_link_JaCkAE"
+      ],
+      "disabled": true,
+      "settings": {
+        "product": "t-shirt-sample-4",
+        "color_scheme": "scheme-3",
+        "secondary_background": false,
+        "media_size": "small",
+        "constrain_to_viewport": false,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "none",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 76,
+        "padding_bottom": 76,
+        "padding_top_mob": 28,
+        "padding_bottom_mob": 28
+      }
+    },
+    "banner_section_bQ6Xjt": {
+      "type": "banner-section",
+      "settings": {
+        "heading": "WE’VE HAND SELECTED ONLY THE BEST CUSTOM APPAREL",
+        "info": "<p>Create, print & ship any custom shirts & apparel you require for all your corporate events, office parties or home use!</p>"
+      }
+    },
+    "image_heading_text_FxAK8p": {
+      "type": "image-heading-text",
+      "settings": {
+        "row-reverse": false,
+        "image": "shopify://shop_images/embroidery-services.webp",
+        "heading": "Embroidery",
+        "info": "<p>Embroidery is the process of using thread to stitch a design or logo onto a product. It’s commonly used to adorn polos, coats, and hats with logos or graphics. Rather than sewing a design by hand, a digital file is now developed that instructs a machine on how and where to place each stitch. Embroidery works best with logos or artwork that are simple and have a low color count. Embroidery is usually not possible for photographs and artwork with great detail or small typography. If this is the case, we’ll get in touch with you and discuss ways to change your design or advise other options.</p><p>Embroidery is recommended for larger orders as digitizing the artwork is a time consuming process.</p>"
+      }
+    },
+    "image_heading_text_ALCg9y": {
+      "type": "image-heading-text",
+      "settings": {
+        "row-reverse": true,
+        "image": "shopify://shop_images/screen-printing-services-nyc.jpg",
+        "heading": "Screen Printing",
+        "info": "<p>When you think about t-shirt printing, you typically think of screen printing. Each color of a design is separated and burned to individual fine-mesh screens in this classic t-shirt printing procedure. Through the screen, the ink is subsequently transferred to the garment. Screen printing is commonly chosen by teams, organizations, and enterprises because it is incredibly cost-effective for printing large bespoke apparel orders.</p><p>Screen printing is ideal for large orders, one-of-a-kind products, prints that require bright or speciality inks, or color matching Pantone values. There are less restrictions on what objects and materials can be printed on using screen printing. Because of the short turnaround periods, it can be a very cost-effective choice for large orders. However, because of the time-consuming preparation, small runs might be costly.</p>"
+      }
+    },
+    "image_heading_text_9797My": {
+      "type": "image-heading-text",
+      "settings": {
+        "row-reverse": false,
+        "image": "shopify://shop_images/direct-to-garment-printing-nyc-1.jpg",
+        "heading": "Direct-To-Garment (DTG) Digital Printing",
+        "info": "<p>Printing a computer image directly onto a shirt or object is known as digital printing or Direct-To-Garment (DTG). It’s a newer technology that works similarly to your inkjet printer at home. To generate the colors in your design, special CMYK inks are blended. As a result, there is no limit to the number of colors you can use in your design. As a result, digital printing is an excellent choice for printing photographs and other detailed<em> </em>artwork.</p><p>Traditional screen printing has a higher cost per print. Digital printing, on the other hand, is far more cost effective for smaller orders since it avoids the hefty setup expenses of screen printing (or even a single shirt).</p>"
+      }
+    },
+    "why_choose_us_9GURQV": {
+      "type": "why-choose-us",
+      "blocks": {
+        "feature_DQ8dwe": {
+          "type": "feature",
+          "settings": {
+            "feature_title": "Premium Quality",
+            "feature_description": "We use industry-leading equipment for the sharpest prints and embroidery."
+          }
+        },
+        "feature_QF3pDb": {
+          "type": "feature",
+          "settings": {
+            "feature_title": "Fast Turnaround",
+            "feature_description": "Get your custom prints quickly with our streamlined process."
+          }
+        },
+        "feature_x6j9xx": {
+          "type": "feature",
+          "settings": {
+            "feature_title": "No Minimum Orders",
+            "feature_description": "Whether you need one or a thousand, we’ve got you covered."
+          }
+        },
+        "feature_daB7dT": {
+          "type": "feature",
+          "settings": {
+            "feature_title": "Eco-Friendly Printing",
+            "feature_description": "We use sustainable inks and materials."
+          }
+        },
+        "feature_dxhXjJ": {
+          "type": "feature",
+          "settings": {
+            "feature_title": "100% Satisfaction Guaranteed",
+            "feature_description": "Our expert team ensures every order meets the highest standards."
+          }
+        }
+      },
+      "block_order": [
+        "feature_DQ8dwe",
+        "feature_QF3pDb",
+        "feature_x6j9xx",
+        "feature_daB7dT",
+        "feature_dxhXjJ"
+      ],
+      "settings": {
+        "section_title": "Why Choose Us?",
+        "section_subtitle": "We provide top-notch services with quality, efficiency, and customer satisfaction in mind.",
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "how_it_works_WfH7Ra": {
+      "type": "how-it-works",
+      "blocks": {
+        "step_XaVLdP": {
+          "type": "step",
+          "settings": {
+            "step_title": "Choose Your Product",
+            "step_description": "T-shirts, hoodies, hats, or custom merchandise",
+            "step_image": "shopify://shop_images/icons8-select-product-32.png"
+          }
+        },
+        "step_LPUyjD": {
+          "type": "step",
+          "settings": {
+            "step_title": "Upload Your Design",
+            "step_description": "Send your logo, text, or artwork",
+            "step_image": "shopify://shop_images/icons8-upload-26.png"
+          }
+        },
+        "step_fmJXym": {
+          "type": "step",
+          "settings": {
+            "step_title": "We Print & Deliver",
+            "step_description": "High-quality prints shipped to your doorstep!",
+            "step_image": "shopify://shop_images/icons8-print-50.png"
+          }
+        }
+      },
+      "block_order": [
+        "step_XaVLdP",
+        "step_LPUyjD",
+        "step_fmJXym"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "reviews_tqM4pW": {
+      "type": "reviews",
+      "blocks": {
+        "review_mcdqcz": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "title": "Emily R.",
+            "text": "Amazing quality! The custom prints turned out perfectly, and bulk ordering was super easy. Highly recommended for businesses!"
+          }
+        },
+        "review_6TPt3Y": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "title": "Mark T.",
+            "text": "Excellent service and quick delivery. The t-shirts are soft, durable, and the print quality is top-notch. Love it!"
+          }
+        },
+        "review_YJD8re": {
+          "type": "review",
+          "settings": {
+            "stars": 4,
+            "title": "Sarah J.",
+            "text": "Very professional team! The bulk order process was seamless, and the results exceeded expectations. Will definitely reorder!"
+          }
+        },
+        "review_FFCjzH": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "title": "Alex P.",
+            "text": "Perfect for our event needs! Custom designs looked vibrant, and the t-shirts arrived on time. Great value for money."
+          }
+        },
+        "review_EbgYpt": {
+          "type": "review",
+          "settings": {
+            "stars": 4,
+            "title": "Rachel K.",
+            "text": "Loved the customization options! Easy to navigate website and amazing customer service. The final products were flawless!"
+          }
+        }
+      },
+      "block_order": [
+        "review_mcdqcz",
+        "review_6TPt3Y",
+        "review_YJD8re",
+        "review_FFCjzH",
+        "review_EbgYpt"
+      ],
+      "settings": {
+        "desktop_spacing": "70px,70px",
+        "mobile_spacing": "0px,0px"
+      }
+    }
+  },
+  "order": [
+    "image_banner2_Vxwy66",
+    "featured_collection",
+    "cards_slider_zaTf7t",
+    "featured_product_MCyTgz",
+    "banner_section_bQ6Xjt",
+    "image_heading_text_FxAK8p",
+    "image_heading_text_ALCg9y",
+    "image_heading_text_9797My",
+    "why_choose_us_9GURQV",
+    "how_it_works_WfH7Ra",
+    "reviews_tqM4pW"
+  ]
+}

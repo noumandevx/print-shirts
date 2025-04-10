@@ -1,0 +1,261 @@
+<div class="main-page-size-row">
+    <div class="main-page-size-container page-width">
+        <div class="main-page-size-inner-row">
+            <div class="main-page-size-inner-row-col">
+                {% if section.settings.heading != blank %}
+                    <div class="main-page-size-main-heading">
+                        <h1>{{ section.settings.heading }}</h1>
+                    </div>
+                {% endif %}
+                {% if section.settings.text != blank %}
+                    <div class="main-page-size-main-text">
+                        {{ section.settings.text }}
+                    </div>
+                {% endif %}
+                <div class="main-page-size-main-parent-of-block">
+                    {% for block in section.blocks %}
+                        <div class="main-page-size-block">
+                            <a href="{{ block.settings.image_link }}" class="main-page-size-block-image">
+                                <img src="{{ block.settings.image | img_url:'master' }}">
+                            </a>
+                            {% if block.settings.heading-block != blank %}
+                                <div class="main-page-size-block-heading">
+                                    <h2>{{ block.settings.heading-block }}</h2>
+                                </div>
+                            {% endif %}
+                            {% if block.settings.text-block != blank %}
+                                <div class="main-page-size-block-text">
+                                    {{ block.settings.text-block }}
+                                </div>
+                            {% endif %}
+                            {% if block.settings.button-text != blank %}
+                                <a href="{{ block.settings.button_link }}" class="main-page-size-block-button-link">
+                                    {{ block.settings.button-text }}
+                                </a>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+                {% if section.settings.end-text != blank %}
+                    <div class="main-page-size-main-end-text">
+                        <h2>{{ section.settings.end-text }}</h2>
+                    </div>
+                {% endif %}
+                {% if section.settings.description != blank %}
+                    <div class="main-page-size-main-desc">
+                        {{ section.settings.description }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .main-page-size-row {
+        width: 100%;
+    }
+    .main-page-size-container {
+        width: 100%;
+    }
+    .main-page-size-inner-row {
+        width: 100%;
+        padding: 30px 0 48px;
+    }
+    .main-page-size-inner-row-col {
+        width: 100%;
+    }
+    .main-page-size-main-heading {
+        width: 100%;
+        margin: .67em 0;
+    }
+    .main-page-size-main-heading h1 {
+        font-weight: 500;
+        line-height: 1.1;
+        color: #000;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 48px;
+        margin: 0;
+    }
+    .main-page-size-main-text {
+        width: 100%;
+    }
+    .main-page-size-main-text p {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 140%;
+        text-align: center;
+    }
+    .main-page-size-main-parent-of-block {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 48px 0;
+    }
+    .main-page-size-block {
+        width: 25%;
+    }
+    a.main-page-size-block-image {
+        max-width: 100% !important;
+    }
+    a.main-page-size-block-image img {
+        height: 344px;
+        object-fit: cover;
+        width: 100%;
+    }
+    .main-page-size-block-heading {
+        width: 100%;
+        margin: 24px 0 12px 0;
+    }
+    .main-page-size-block-heading h2 {
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 120%;
+        color: black;
+        text-transform: uppercase;
+        letter-spacing: .03em;
+        margin: 0;
+    }
+    .main-page-size-block-text {
+        width: 100%;
+        margin: 0 0 32px 0;
+    }
+    .main-page-size-block-text p {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        color: black;
+        margin: 0;
+    }
+    a.main-page-size-block-button-link {
+        border-bottom: 1px solid currentcolor;
+        color: black;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.4;
+        text-decoration: none;
+        transition: all .2s linear;
+    }
+    .main-page-size-main-end-text {
+        width: 100%;
+        margin: 16px 0;
+    }
+    .main-page-size-main-end-text h2 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 120%;
+        text-transform: uppercase;
+        letter-spacing: .03em;
+        text-align: center;
+    }
+    .main-page-size-main-desc {
+        width: 100%;
+    }
+    .main-page-size-main-desc p {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 140%;
+        text-align: center;
+    }
+    .main-page-size-main-desc p a {
+        color: black;
+        border-bottom: 1px solid black;
+    }
+    @media screen and (max-width:768px){
+      .main-page-size-inner-row {
+        width: 100%;
+        padding: 30px 0 56px;
+      }
+      .main-page-size-main-heading h1 {
+        font-size: 30px;
+        line-height: 1.1;
+      }
+      .main-page-size-main-text {
+        margin: 16px 0 0 0;
+      }
+      .main-page-size-main-parent-of-block {
+        padding: 56px 0;
+        flex-direction: column;
+        gap: 40px;
+      }
+      .main-page-size-block {
+        width: 100%;
+      }
+    }
+</style>
+{% schema %}
+{
+  "name": "Main page size",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+    },
+    {
+        "type": "text",
+        "id": "end-text",
+        "label": "text",
+    },
+    {
+        "type": "richtext",
+        "id": "description",
+        "label": "Desc"
+    }
+  ],
+  "blocks": [
+     {
+       "name": "Main page size block",
+       "type": "slide",
+       "settings": [
+        {
+            "type": "url",
+            "id": "image_link",
+            "label": "Image link"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "heading-block",
+            "label": "Heading",
+          },
+          {
+            "type": "richtext",
+            "id": "text-block",
+            "label": "Text"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button link"
+          },
+          {
+            "type": "text",
+            "id": "button-text",
+            "label": "Button text",
+          }
+       ]
+     }
+  ],
+  "presets": [
+    {
+      "name": "Main page size",
+    }
+  ]
+}
+{% endschema %}

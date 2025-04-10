@@ -1,0 +1,20 @@
+.announcement-bar__email {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.utility-bar__grid .announcement-bar__item {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.utility-bar {
+  background-color: var(--color-black);
+}
+
+.announcement-bar__message,
+.announcement-bar__emailcontent {
+  color: var(--color-white);
+  font-size: var(--font-size-16);
+}

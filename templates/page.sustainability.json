@@ -1,0 +1,56 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
+    "sections": {
+      "main": {
+        "type": "main-page",
+        "disabled": true,
+        "settings": {
+          "padding_top": 28,
+          "padding_bottom": 28
+        }
+      },
+      "rich_text_e9aEk7": {
+        "type": "rich-text",
+        "blocks": {
+          "heading_iRXjfL": {
+            "type": "heading",
+            "settings": {
+              "heading": "Sustainability",
+              "heading_size": "h1"
+            }
+          },
+          "text_MwdPDf": {
+            "type": "text",
+            "settings": {
+              "text": "<p>At Ghost Print Lab, we understand the importance of protecting our planet. That’s why sustainability is at the core of our operations. We are committed to reducing our environmental footprint while delivering high-quality products that inspire creativity and self-expression.</p><h2>Our Approach to Sustainability</h2><ol><li><strong>Eco-Friendly Materials:</strong></li><li><strong>Waste Reduction:</strong></li><li><strong>Sustainable Packaging:</strong></li><li><strong>Energy Efficiency:</strong></li><li><strong>Continuous Improvement:</strong></li></ol><h2>Why It Matters</h2><p>Sustainability is more than just a trend—it’s a responsibility. By choosing Ghost Print Lab, you’re supporting a brand that values ethical practices, respects the environment, and works towards a greener future.</p><h2>Join Us in Making a Difference</h2><p>We believe that small actions lead to big changes. By making mindful choices in our business and encouraging our customers to do the same, we can collectively make a positive impact on the environment.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "heading_iRXjfL",
+          "text_MwdPDf"
+        ],
+        "settings": {
+          "desktop_content_position": "left",
+          "content_alignment": "left",
+          "color_scheme": "",
+          "full_width": true,
+          "padding_top": 40,
+          "padding_bottom": 52
+        }
+      }
+    },
+    "order": [
+      "main",
+      "rich_text_e9aEk7"
+    ]
+  }
+   

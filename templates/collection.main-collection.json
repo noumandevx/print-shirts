@@ -1,0 +1,113 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "custom_collection_banner_bNQebN": {
+      "type": "custom-collection-banner",
+      "settings": {
+        "desktop_spacing": "62px,50px",
+        "mobile_spacing": "0px,0px",
+        "title": "{{ collection.title }}",
+        "text": "{{ collection.description }}"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "quick_add": "standard",
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "reviews_qCjzC7": {
+      "type": "reviews",
+      "blocks": {
+        "review_4YNEJp": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "title": "Emily R.",
+            "text": "Amazing quality! The custom prints turned out perfectly, and bulk ordering was super easy. Highly recommended for businesses!"
+          }
+        },
+        "review_F8JnVw": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "title": "Mark T.",
+            "text": "Excellent service and quick delivery. The t-shirts are soft, durable, and the print quality is top-notch. Love it!"
+          }
+        },
+        "review_cciDxt": {
+          "type": "review",
+          "settings": {
+            "stars": 4,
+            "title": "Sarah J.",
+            "text": "Very professional team! The bulk order process was seamless, and the results exceeded expectations. Will definitely reorder!"
+          }
+        },
+        "review_KBgh7D": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "title": "Alex P.",
+            "text": "Perfect for our event needs! Custom designs looked vibrant, and the t-shirts arrived on time. Great value for money."
+          }
+        },
+        "review_BqPArL": {
+          "type": "review",
+          "settings": {
+            "stars": 4,
+            "title": "Rachel K.",
+            "text": "Loved the customization options! Easy to navigate website and amazing customer service. The final products were flawless!"
+          }
+        }
+      },
+      "block_order": [
+        "review_4YNEJp",
+        "review_F8JnVw",
+        "review_cciDxt",
+        "review_KBgh7D",
+        "review_BqPArL"
+      ],
+      "settings": {
+        "desktop_spacing": "70px,70px",
+        "mobile_spacing": "0px,0px"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "custom_collection_banner_bNQebN",
+    "product-grid",
+    "reviews_qCjzC7"
+  ]
+}

@@ -1,0 +1,75 @@
+{% style %}
+  {% assign desktop = section.settings.desktop_spacing | split :',' %}
+  {% assign mobile = section.settings.mobile_spacing | split :',' %}
+  .section--{{section.id}}{
+    padding-top:{{desktop.first}};
+    padding-bottom:{{desktop.last}};
+  }
+  @media(max-width:767px){
+    .section--{{section.id}}{
+        padding-top:{{mobile.first}};
+        padding-bottom:{{mobile.last}};
+      }
+  }
+{% endstyle %}
+
+<div class="custom-collection-banner__section section--{{section.id}}">
+  <div class="container">
+    <div class="ccb__main">
+      <div class="ccb__content">
+        <div class="ccb__header">
+          <h2>{{ section.settings.title }}</h2>
+        </div>
+        <div class="ccb__detail">
+          <div class="ccb__text">
+            {{ section.settings.text }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Collection Banner",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "label": "Desktop Spacing",
+      "id": "desktop_spacing",
+      "info": "Add Spacing for top and bottom",
+      "default": "0px,0px",
+      "placeholder": "20px,30px"
+    },
+    {
+      "type": "text",
+      "label": "Mobile Spacing",
+      "id": "mobile_spacing",
+      "info": "Add Spacing for top and bottom",
+      "default": "0px,0px",
+      "placeholder": "15px,12px"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Add title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Add Detail"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Collection Banner"
+    }
+  ]
+}
+{% endschema %}

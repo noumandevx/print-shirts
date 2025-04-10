@@ -1,0 +1,96 @@
+<div class="banner-section-row">
+    <div class="banner-section-container page-width">
+        <div class="banner-section-inner-row">
+            <div class="banner-section-inner-row-col">
+                {% if section.settings.heading != blank %}
+                    <div class="banner-section-inner-row-main-heading">
+                        <h1>{{ section.settings.heading }}</h1>
+                    </div>
+                {% endif %}
+                {% if section.settings.info != blank %}
+                    <div class="banner-section-inner-row-main-info">
+                        {{ section.settings.info }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .banner-section-row {
+        width: 100%;
+        padding: 80px 0 50px 0;
+    }
+    .banner-section-container {
+        width: 100%;
+    }
+    .banner-section-inner-row {
+        width: 100%;
+    }
+    .banner-section-inner-row-col {
+        width: 100%;
+        border-bottom: 6px dashed;
+        padding-bottom: 50px;
+    }
+    .banner-section-inner-row-main-heading h1 {
+        font-size: 54px;
+        text-align: center;
+        font-weight: 400 !important;
+        margin: 0;
+    }
+    .banner-section-inner-row-main-heading {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .banner-section-inner-row-main-info {
+        width: 100%;
+        text-align: center;
+    }
+    .banner-section-inner-row-main-info p {
+        margin: 0;
+        font-size: 19px;
+        line-height: 1.5;
+    }
+    .banner-section-inner-row-main-info p a {
+        text-decoration: underline !important;
+        color: #2ff1ed;
+    }
+    .banner-section-inner-row-main-info p a:hover {
+        color: black !important;
+    }
+    @media screen and (max-width:768px){
+        .faqs-section-row {
+          padding: 30px 0 50px 0;
+        }
+        .banner-section-inner-row-main-heading h1 {
+          font-size: 30px;
+          line-height: 1;
+        }
+        .banner-section-inner-row-main-info p {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+    }
+</style>
+{% schema %}
+{
+  "name": "Banner section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+        "type": "richtext",
+        "id": "info",
+        "label": "Info"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner section",
+    }
+  ]
+}
+{% endschema %}

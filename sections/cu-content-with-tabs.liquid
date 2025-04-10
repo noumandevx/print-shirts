@@ -1,0 +1,358 @@
+{% if section.blocks.size > 0 %}
+  <div class="cu-content-with-tabs-row">
+    <div class="page-width">
+      <div class="cu-content-with-tabs-iner-row">
+        <div class="cu-content-with-tabs--top">
+          <h5 class="tabs--top--title">{{ section.settings.text }}</h5>
+          <h3 class="tabs--top--heading">{{ section.settings.heading }}</h3>
+          <div class="tab-wrapper">
+            <ul class="tabs">
+              {% for block in section.blocks %}
+                {% if block.settings.tab != '' %}
+                  <li class="tab-link {% if forloop.first %}active-now{% endif %}" data-tab="{{ forloop.index }}">
+                    {{ block.settings.tab }}
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <div class="tabs-content-wrapper-column">
+          {% for block in section.blocks %}
+            <div
+              class="tabs-content-wrapper-column-item {% if forloop.first %}active-now{% endif %}"
+              data-tab="{{ forloop.index }}"
+            >
+              {% if block.settings.image %}
+                <div class="wrapper-column-item-image">
+                  <img src="{{ block.settings.image | img_url:'master' }}">
+                </div>
+              {% endif %}
+              <div class="wrapper-column-item-content">
+                <div class="wrapper-column-item-content-top">
+                  <h2 class="vector-title">{{ block.settings.heading }}</h2>
+                  <div class="vector-cotnent">
+                    {{ block.settings.text }}
+                  </div>
+                </div>
+                <div class="wrapper-column-item-content-bottom">
+                  <div class="item-content-bottom-item">
+                    <div class="content-bottom--icon">
+                      {% if block.settings.icon_1 %}
+                        <img src="{{ block.settings.icon_1 | img_url:'master' }}">
+                      {% endif %}
+                    </div>
+                    <div class="content-bottom--icon-info">
+                      <div class="vector-file_child-title">{{ block.settings.title_1 }}</div>
+                      <div class="vector-file_child-text">{{ block.settings.text_1 }}</div>
+                    </div>
+                  </div>
+                  <div class="item-content-bottom-item">
+                    <div class="content-bottom--icon">
+                      {% if block.settings.icon_2 %}
+                        <img src="{{ block.settings.icon_2 | img_url:'master' }}">
+                      {% endif %}
+                    </div>
+                    <div class="content-bottom--icon-info">
+                      <div class="vector-file_child-title">{{ block.settings.title_2 }}</div>
+                      <div class="vector-file_child-text">{{ block.settings.text_2 }}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+{% schema %}
+{
+  "name": "Cu content with tabs",
+  "settings": [
+     {
+        "type": "text",
+        "id": "text",
+        "label": "Title",
+        "default":"ART FILES"
+     },
+     {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Preferred File Types"
+      }
+  ],
+  "blocks":[
+    {
+      "type" : "format",
+      "name" : "Format info",
+      "settings" : [
+          {
+            "type": "text",
+            "id": "tab",
+            "label": "Tab title"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_1",
+            "label": "icon"
+          },
+          {
+            "type": "text",
+            "id": "title_1",
+            "label": "Title 1"
+          },
+          {
+            "type": "richtext",
+            "id": "text_1",
+            "label": "Text"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_2",
+            "label": "icon"
+          },
+          {
+            "type": "text",
+            "id": "title_2",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "text_2",
+            "label": "Text"
+          }
+       ]
+    }
+  ],
+  "presets" : [
+    {
+      "name" : "Cu content with tabs"
+    }
+  ]
+}
+{% endschema %}
+<style>
+  .cu-vector-file-iner-row {
+      padding: 60px 0;
+  }
+  .cu-content-with-tabs-row {
+      padding: 100px 0;
+  }
+
+  .cu-content-with-tabs-row * {
+      transition: 0.3s ease all;
+      animation-duration: 1s;
+  }
+
+  .cu-content-with-tabs-iner-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .cu-content-with-tabs--top {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+  }
+
+  h5.tabs--top--title {
+      font-size: 24px;
+      /* font-family: unset; */
+      color: #2ff1ed;
+  }
+
+  h3.tabs--top--heading {
+      font-size: 44px;
+  }
+
+  .tab-wrapper ul li {
+      list-style: none;
+  }
+
+  .tab-wrapper ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+  }
+
+  .tab-wrapper {
+      margin: 30px auto;
+      width: 100%;
+      border-top: 1px solid #dee2e6;
+      border-bottom: 1px solid #dee2e6;
+  }
+
+  .tab-wrapper ul li {
+      position: relative;
+      list-style: none;
+      padding: 15px 0;
+      margin: 0 40px;
+      color: #5F6064;
+      cursor: pointer;
+      font-weight: 600;
+      transition: allease 0.5s;
+      letter-spacing: 1px;
+      font-size: 18px;
+  }
+
+  .tab-wrapper ul li:after {
+      content: '';
+      opacity: 0;
+      height: 3px;
+      width: 0%;
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      border-radius: 10px;
+      background-color: #000;
+      transition-duration: 0.5s;
+  }
+
+  .tab-wrapper ul li:hover:after {
+      width: 100%;
+      opacity: 1;
+  }
+
+  li.tab-link.active-now::after {
+      width: 100%;
+      opacity: 1;
+  }
+  .tabs-content-wrapper-column-item {
+      font-weight: 300;
+      font-size: 15px;
+      opacity: 0;
+      transform: translateY(15px);
+      animation: fadeIn 0.5s ease 1 forwards;
+      display: none;
+  }
+
+  .tabs-content-wrapper-column-item.active-now {
+      display: flex;
+  }
+  .item-content-bottom-item {
+      margin: 30px 0;
+      display: flex;
+      align-items: center;
+  }
+
+  .content-bottom--icon {
+      padding: 0 12px;
+  }
+  .vector-file_child-title {
+      margin-top: 0;
+      margin-bottom: 5px;
+  }
+
+  .vector-file_child-text ul {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+  }
+  .vector-file_child-text ul li::marker {
+      font-size: 26px;
+  }
+  @keyframe fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+  @media (min-width: 801px) {
+    .wrapper-column-item-image {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+    .wrapper-column-item-content {
+        flex: 0 0 auto;
+        width: 50%;
+        margin-left: 8.33333333%;
+    }
+    .content-bottom--icon {
+        flex: 0 0 auto;
+        width: 16.66666667%;
+    }
+    .content-bottom--icon-info {
+        flex: 0 0 auto;
+        width: 83.33333333%;
+    }
+  }
+  @media (max-width: 800px) {
+
+  }
+  @media (max-width:800px){
+    .cu-vector-file-row {
+        padding: 30px 0;
+    }
+    .tab-wrapper ul {
+        flex-direction: column;
+    }
+    .wrapper-column-item-image IMG {
+        WIDTH: 100%;
+    }
+
+    li.tab-link {
+        margin: 0!important;
+    }
+
+    h3.tabs--top--heading {
+        font-size: 28px;
+    }
+
+    h5.tabs--top--title {
+        font-size: 17px;
+    }
+
+    .tabs-content-wrapper-column {}
+
+    .tabs-content-wrapper-column-item {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .item-content-bottom-item {
+        flex-direction: column;
+        align-items: self-start;
+    }
+
+    .content-bottom--icon-info {
+        padding: 0 20px;
+        margin-top: 13px;
+    }
+    .cu-content-with-tabs-row {
+        padding: 40px 0;
+    }
+  }
+</style>
+<script>
+  $(".tab-wrapper ul.tabs li.tab-link").click(function(){
+    $(".tab-wrapper ul.tabs li.tab-link").removeClass('active-now');
+    $(this).addClass('active-now');
+    var tab_id = $(this).attr('data-tab');
+
+    $('.tabs-content-wrapper-column-item').removeClass('active-now');
+    $(this).parents('.cu-content-with-tabs-iner-row').find('.tabs-content-wrapper-column').find('.tabs-content-wrapper-column-item[data-tab="' + tab_id + '"]').addClass('active-now');
+  });
+</script>

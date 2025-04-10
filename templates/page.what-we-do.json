@@ -1,0 +1,80 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "banner_section_bQ6Xjt": {
+      "type": "banner-section",
+      "settings": {
+        "heading": "WHAT WE DO",
+        "info": "<p>We offer a wide range of apparel printing services.<br/>If you need something specific, get a <a href=\"https://ghostprintlab.com/pages/contact\" title=\"https://ghostprintlab.com/pages/contact\">custom quote.</a></p>"
+      }
+    },
+    "image_heading_text_FxAK8p": {
+      "type": "image-heading-text",
+      "settings": {
+        "row-reverse": false,
+        "image": "shopify://shop_images/pexels-cmrcn-17710109.webp",
+        "heading": "Custom Embroidery Services",
+        "info": "<p>Bring your brand to life with precision embroidery! Our advanced embroidery machines stitch your logo or design onto polos, jackets, hats, and more—ensuring a premium, long-lasting finish.</p><p>We transform your design into a digital embroidery file, guiding our machines to place each stitch with accuracy. This method works best for simple logos or designs with minimal colors. If your artwork has intricate details or small typography, we’ll work with you to refine it or suggest the best alternatives.</p><p>Embroidery is an excellent choice for bulk orders, as the setup process requires digitizing your design for optimal results. Let’s create high-quality, professional apparel tailored to your brand!</p>"
+      }
+    },
+    "image_heading_text_ALCg9y": {
+      "type": "image-heading-text",
+      "settings": {
+        "row-reverse": true,
+        "image": "shopify://shop_images/istockphoto-1177481929-612x612.jpg",
+        "heading": "Professional Screen Printing",
+        "info": "<p>Get bold, vibrant prints with our high-quality screen printing services! This classic method involves transferring ink onto apparel through fine-mesh screens, ensuring crisp and durable designs.</p><p>Perfect for bulk orders, screen printing is a go-to choice for businesses, teams, and organizations looking for cost-effective custom apparel. It allows for bright colors, specialty inks, and precise Pantone color matching, making it ideal for standout branding.</p><p>With fewer material restrictions and quick turnaround times, screen printing is an efficient and economical solution for large orders. However, due to the setup process, smaller batches may be less cost-effective. Let’s create custom apparel that makes an impact!</p>"
+      }
+    },
+    "image_heading_text_9797My": {
+      "type": "image-heading-text",
+      "settings": {
+        "row-reverse": false,
+        "image": "shopify://shop_images/a-person-printing-dream-big-on-a-shirt.webp",
+        "heading": "High-Definition Garment Printing",
+        "info": "<p>Bring your designs to life with unlimited colors and intricate details! Direct-to-Garment (DTG) printing uses advanced technology to print digital images directly onto apparel—just like an inkjet printer, but for fabric.</p><p>Unlike screen printing, DTG requires no setup costs, making it the perfect choice for smaller orders, one-off prints, and designs with gradients, photographs, or fine details. With high-quality CMYK inks, we ensure vibrant and lasting prints on every garment.</p><p>If you need full-color printing without the hassle of bulk orders, DTG is the ideal solution. Let’s turn your creative vision into reality!</p>"
+      }
+    },
+    "multi_data_7daHCC": {
+      "type": "multi-data",
+      "disabled": true,
+      "settings": {
+        "top-text": "hey, monster press",
+        "first-text": "I NEED",
+        "second-text": "100",
+        "third-text": "T-SHIRTS",
+        "end-text": "delivered as soon as possible!",
+        "second-col-text": "Give Me A Quote!",
+        "button_link": "#",
+        "third-col-text-1": "VISIT SAMPLE STORE",
+        "button_link-2": "#",
+        "third-col-text-2": "WANT SOMETHING CUSTOM",
+        "button_link-3": "#"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "banner_section_bQ6Xjt",
+    "image_heading_text_FxAK8p",
+    "image_heading_text_ALCg9y",
+    "image_heading_text_9797My",
+    "multi_data_7daHCC"
+  ]
+}

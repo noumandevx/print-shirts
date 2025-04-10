@@ -1,0 +1,56 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
+    "sections": {
+      "main": {
+        "type": "main-page",
+        "disabled": true,
+        "settings": {
+          "padding_top": 28,
+          "padding_bottom": 28
+        }
+      },
+      "rich_text_tWrtPi": {
+        "type": "rich-text",
+        "blocks": {
+          "heading_mzVMwU": {
+            "type": "heading",
+            "settings": {
+              "heading": "Stocklist",
+              "heading_size": "h1"
+            }
+          },
+          "text_FhUVpD": {
+            "type": "text",
+            "settings": {
+              "text": "<p><strong>Explore Our Stocklist for Custom T-Shirt Printing</strong></p><p>At Ghost Print Lab, we offer a wide selection of premium t-shirts that are perfect for custom printing. Whether you're looking to create unique designs for personal wear, corporate events, or promotional materials, our stocklist has something for everyone. We provide various sizes, styles, and colors to ensure you find the perfect match for your custom print needs.</p><p>For businesses or events requiring bulk orders, we offer competitive pricing and fast turnaround times. No matter the quantity, we guarantee high-quality prints and exceptional service every time. Browse our stocklist today and start creating custom designs that stand out!</p>"
+            }
+          }
+        },
+        "block_order": [
+          "heading_mzVMwU",
+          "text_FhUVpD"
+        ],
+        "settings": {
+          "desktop_content_position": "left",
+          "content_alignment": "left",
+          "color_scheme": "",
+          "full_width": true,
+          "padding_top": 40,
+          "padding_bottom": 52
+        }
+      }
+    },
+    "order": [
+      "main",
+      "rich_text_tWrtPi"
+    ]
+  }
+  

@@ -1,0 +1,47 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "blocks": {
+        "other_table_66qL4A": {
+          "type": "other-table",
+          "settings": {
+            "heading-text": "GET IN TOUCH",
+            "main-info": "<p><a href=\"tel:+1 (773) 500-1308\" title=\"tel:+1 (773) 500-1308\">+1 (773) 500-1308</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "other_table_66qL4A"
+      ],
+      "settings": {
+        "main-title": "",
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "form"
+  ]
+}

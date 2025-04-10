@@ -1,0 +1,112 @@
+<script src="{{ 'card-slider.js' | asset_url }}" defer="defer"></script>
+{% style %}
+  {% assign desktop = section.settings.desktop_spacing | split :',' %}
+  {% assign mobile = section.settings.mobile_spacing | split :',' %}
+  .section--{{section.id}}{
+    padding-top:{{desktop.first}};
+    padding-bottom:{{desktop.last}};
+  }
+  @media(max-width:767px){
+    .section--{{section.id}}{
+        padding-top:{{mobile.first}};
+        padding-bottom:{{mobile.last}};
+      }
+  }
+{% endstyle %}
+<cards-slider class="cards-slider-section section--{{section.id}}">
+  <div class="cards-slider__main">
+    <div class="cards-slider__container">
+      <div class="swiper-slider__items">
+        {% for block in section.blocks %}
+          <div class="swiper-slider__items-slide">
+            <div class="card-slider__card">
+              <div class="card-slider__item">
+                <div class="card-slider__image">
+                  <div class="custom-media">
+                    {%- if block.settings.image != blank -%}
+                      {%- assign widths = '165, 360, 535, 750, 1070, 1500' -%}
+                      {%- capture sizes -%}
+                          (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
+                          (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
+                        {%- endcapture -%}
+                      {{
+                        block.settings.image
+                        | image_url: width: 1500
+                        | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+                      }}
+                    {%- endif -%}
+                  </div>
+                </div>
+                <div class="card-slider__title">
+                  <h2>{{ block.settings.heading }}</h2>
+                </div>
+                <div class="clard-slider__detail">
+                  <div class="card-slider__text">
+                    {{ block.settings.text }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</cards-slider>
+
+{% schema %}
+{
+  "name": "cards slider",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "label": "Desktop Spacing",
+      "id": "desktop_spacing",
+      "info": "Add Spacing for top and bottom",
+      "default": "0px,0px",
+      "placeholder": "20px,30px"
+    },
+    {
+      "type": "text",
+      "label": "Mobile Spacing",
+      "id": "mobile_spacing",
+      "info": "Add Spacing for top and bottom",
+      "default": "0px,0px",
+      "placeholder": "15px,12px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Card Image"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Add Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Add Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "cards slider"
+    }
+  ]
+}
+{% endschema %}

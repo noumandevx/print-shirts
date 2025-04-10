@@ -1,0 +1,453 @@
+
+@font-face {
+  font-family: "outfit-bold";
+  src: url("https://cdn.shopify.com/s/files/1/0884/6435/9721/files/OutfitSemiBold.ttf?v=1724245810")
+      format("woff2"),
+  url("https://cdn.shopify.com/s/files/1/0884/6435/9721/files/OutfitSemiBold.ttf?v=1724245810")
+      format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "outfit-medium";
+  src: url("https://cdn.shopify.com/s/files/1/0884/6435/9721/files/OutfitMedium.ttf?v=1724245810")
+      format("woff2"),
+  url("https://cdn.shopify.com/s/files/1/0884/6435/9721/files/OutfitMedium.ttf?v=1724245810")
+      format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "outfit-regular";
+  src: url("https://cdn.shopify.com/s/files/1/0884/6435/9721/files/OutfitMedium.ttf?v=1724245810")
+    format("woff2"),
+  url("https://cdn.shopify.com/s/files/1/0884/6435/9721/files/OutfitMedium.ttf?v=1724245810");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "outfit-light";
+  src: url("https://cdn.shopify.com/s/files/1/0884/6435/9721/files/OutfitLight1.ttf?v=1724246199")
+    format("woff2"),
+  url("https://cdn.shopify.com/s/files/1/0884/6435/9721/files/OutfitLight1.ttf?v=1724246199");
+  font-weight: 400;
+  font-style: normal;
+}
+ /* ................ start calibre font .............. */
+ @font-face {
+  font-family: "Calibre";
+  src: url("https://cdn.shopify.com/s/files/1/0884/6435/9721/files/Calibre-Regular-1.woff?v=1737554023")
+      format("woff2"),
+  url("https://cdn.shopify.com/s/files/1/0884/6435/9721/files/Calibre-Regular-1.woff?v=1737554023")
+      format("woff");
+  font-weight: 300;
+  font-style: normal;
+} 
+
+/* @font-face {
+  font-family: "Calibre";
+  src: url("https://cdn.shopify.com/s/files/1/0884/6435/9721/files/CalibreMedium.otf?v=1737548775")
+      format("woff2"),
+  url("https://cdn.shopify.com/s/files/1/0884/6435/9721/files/CalibreMedium.otf?v=1737548775")
+      format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}  */
+@font-face {
+  font-family: "Calibre";
+  src: url("https://cdn.shopify.com/s/files/1/0884/6435/9721/files/calibre-web-medium-1.woff?v=1737553689")
+      format("woff2"),
+  url("https://cdn.shopify.com/s/files/1/0884/6435/9721/files/calibre-web-medium-1.woff?v=1737553689")
+      format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+} 
+
+@font-face {
+  font-family: "Calibre-bold";
+  src: url("https://cdn.shopify.com/s/files/1/0884/6435/9721/files/calibre-web-black-1.woff?v=1737553689")
+      format("woff2"),
+  url("https://cdn.shopify.com/s/files/1/0884/6435/9721/files/calibre-web-black-1.woff?v=1737553689")
+      format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root  {
+  /* --font-primary: 'outfit-bold', sans-serif;
+  --font-secondary: 'outfit-regular', sans-serif;
+  --font-tertiary: 'outfit-light', sans-serif;
+  --font-quaternary: 'outfit-medium', sans-serif; */
+  --font-primary: 'Calibre-bold', sans-serif;
+  --font-secondary: 'Calibre', sans-serif;
+  --font-tertiary: 'Calibre', sans-serif;
+  --font-quaternary: 'Calibre', sans-serif;
+  --font-weight-normal: normal;
+  --font-weight-100: 100;
+  --font-weight-200: 200;
+  --font-weight-300: 300;
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+  --font-weight-800: 800;
+  --font-weight-900: 900;
+  --font-style-normal: normal;
+  --font-style-italic: italic;
+  --line-height-normal: normal;
+  --letter-spacing-normal: normal;
+  --margin-auto: 0 auto;
+  --text-uppercase: uppercase;
+  --text-lowercase: lowercase;
+  --text-capitalize: capitalize;
+  --font-size-8: 8px;
+  --font-size-10: 10px;
+  --font-size-11: 11px;
+  --font-size-12: 12px;
+  --font-size-13: 13px;
+  --font-size-14: 14px;
+  --font-size-15: 15px;
+  --font-size-16: 16px;
+  --font-size-18: 18px;
+  --font-size-19: 19px;
+  --font-size-20: 20px;
+  --font-size-21: 21px;
+  --font-size-22: 22px;
+  --font-size-24: 24px;
+  --font-size-25: 25px;
+  --font-size-26: 26px;
+  --font-size-27: 27px;
+  --font-size-28: 28px;
+  --font-size-30: 30px;
+  --font-size-32: 32px;
+  --font-size-34: 34px;
+  --font-size-35: 35px;
+  --font-size-36: 36px;
+  --font-size-40: 40px;
+  --font-size-41: 41px;
+  --font-size-45: 45px;
+  --font-size-56: 56px;
+  --font-size-60: 60px;
+  --font-size-72: 72px;
+  --text-left: left;
+  --text-center: center;
+  --text-right: right;
+
+  /* Color Declaration */
+  --color-black: #000000;
+  --color-black-01: #1a1818;
+  --color-black-02: #231F20;
+  --color-white: #ffffff;
+  --color-grey-01:#6E706F;
+  --color-grey-02:#9f9f9f;
+  --color-blue-primary:#1F51FF;
+  --color-transparent: transparent;
+}
+
+/* normalize css */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  font-family: var( --font-tertiary);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-normal);
+  letter-spacing: 1px;
+  line-height: normal;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a:not([href]) {
+  cursor: not-allowed;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+div,
+span,
+applet,
+object,
+iframe,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend {
+  outline: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  font: inherit;
+  letter-spacing: 1px;
+}
+
+h1,h2,h3,h4,h5,h6,strong,b{
+  font-family: var(--font-primary);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* utility classes*/
+.container,
+.page-width {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 75px;
+  padding-right: 75px;
+}
+
+.content-left {
+  text-align: var(--text-left);
+}
+
+.content-center {
+  text-align: var(--text-center);
+}
+
+.content-right {
+  text-align: var(--text-right);
+}
+
+.align-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+}
+
+.break-word {
+  word-break: break-word;
+}
+
+.text-ellipsis {
+  white-space: nowrap;
+  word-wrap: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-p {
+  font-family: var(--font-family);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-content);
+}
+
+.text-p--primaryFont {
+  --font-family: var(--font-primary);
+}
+
+.text-p--10 {
+  --font-size-content: var(--font-size-10);
+}
+
+.text-p--12 {
+  --font-size-content: var(--font-size-12);
+}
+
+.text-p--13 {
+  --font-size-content: var(--font-size-13);
+}
+
+.text-p--14 {
+  --font-size-content: var(--font-size-14);
+}
+
+.text-p--16 {
+  --font-size-content: var(--font-size-16);
+}
+
+.text-p--18 {
+  --font-size-content: var(--font-size-18);
+}
+
+.text-p--20 {
+  --font-size-content: var(--font-size-20);
+}
+
+.text-p--22 {
+  --font-size-content: var(--font-size-22);
+}
+
+.text-p--24 {
+  --font-size-content: var(--font-size-24);
+}
+
+.text-p--26 {
+  --font-size-content: var(--font-size-26);
+}
+
+.text-p--27 {
+  --font-size-content: var(--font-size-27);
+}
+
+.text-p--28 {
+  --font-size-content: var(--font-size-28);
+}
+
+.text-p--32 {
+  --font-size-content: var(--font-size-32);
+}
+
+.text-p--40 {
+  --font-size-content: var(--font-size-40);
+}
+
+.text-p--45 {
+  --font-size-content: var(--font-size-45);
+}
+
+.text-p--56 {
+  --font-size-content: var(--font-size-56);
+}
+
+.text-p--60 {
+  --font-size-content: var(--font-size-60);
+}
+
+.text-p--72 {
+  --font-size-content: var(--font-size-72);
+}
+
+.uppercase {
+  text-transform: var(--text-uppercase);
+}
+
+.capitalize {
+  text-transform: var(--text-capitalize);
+}
+
+.lowercase {
+  text-transform: var(--text-lowercase);
+}
+
+.button {
+  font-size: var(--font-size-16);
+  min-height: 40px;
+  height: 40px;
+  padding: 0 0;
+  max-width: 168px;
+  width: 100%;
+  min-width: unset;
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-500);
+}
+
+.custom-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+@media(max-width: 1200px) {
+  .container, .page-width {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+}
+@media(max-width: 767px) {
+  .container, .page-width {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

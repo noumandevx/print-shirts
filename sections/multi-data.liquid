@@ -1,0 +1,369 @@
+<div class="multi-data-row">
+  <div class="multi-data-container">
+    <div class="multi-data-inner-row">
+      <div class="multi-data-inner-row-col">
+        <div class="multi-data-inner-row-col-1">
+          {% if section.settings['top-text'] != blank %}
+            <div class="multi-data-inner-row-col-1-top-text">
+              <h2>{{ section.settings['top-text'] }}</h2>
+            </div>
+          {% endif %}
+          <div class="multi-data-inner-row-col-1-main-heading">
+            {% if section.settings['first-text'] != blank %}
+              <h1 class="multi-data-inner-row-col-1-text-heading-1">
+                {{ section.settings['first-text'] }}
+              </h1>
+            {% endif %}
+            {% if section.settings['second-text'] != blank %}
+              <h1 class="multi-data-inner-row-col-1-text-heading-2">
+                {{ section.settings['second-text'] }}
+              </h1>
+            {% endif %}
+            {% if section.settings['third-text'] != blank %}
+              <h1 class="multi-data-inner-row-col-1-text-heading-3">
+                {{ section.settings['third-text'] }}
+              </h1>
+            {% endif %}
+          </div>
+          {% if section.settings['end-text'] != blank %}
+            <div class="multi-data-inner-row-col-1-main-end-text">
+              <h1>{{ section.settings['end-text'] }}</h1>
+            </div>
+          {% endif %}
+        </div>
+        <div class="multi-data-inner-row-col-2">
+          {% if section.settings['second-col-text'] != blank %}
+            <a href="{{ section.settings.button_link }}" class="multi-data-inner-row-col-2-first-div">
+              <h1>{{ section.settings['second-col-text'] }}</h1>
+            </a>
+          {% endif %}
+          <div class="multi-data-inner-row-col-2-second-div">
+            {% if section.settings['third-col-text-1'] != blank %}
+              <a href="{{ section.settings.button_link-2 }}" class="multi-data-inner-row-col-2-second-div-1">
+                <h1>{{ section.settings['third-col-text-1'] }}</h1>
+              </a>
+            {% endif %}
+            {% if section.settings['third-col-text-2'] != blank %}
+              <a href="{{ section.settings.button_link-3 }}" class="multi-data-inner-row-col-2-second-div-2">
+                <h1>{{ section.settings['third-col-text-2'] }}</h1>
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+   .multi-data-row {
+       width: 100%;
+   }
+   .multi-data-container {
+       width: 100%;
+   }
+   .multi-data-inner-row {
+       width: 100%;
+   }
+   .multi-data-inner-row-col {
+       width: 100%;
+       display: flex;
+       justify-content: center;
+   }
+   .multi-data-inner-row-col-1 {
+       width: 50%;
+       background: white;
+       padding: 60px 50px;
+   }
+   .multi-data-inner-row-col-2 {
+       width: 50%;
+       display: flex;
+       align-items: stretch;
+       gap: 7px;
+   }
+   .multi-data-inner-row-col-1-top-text {
+       width: 100%;
+   }
+   .multi-data-inner-row-col-1-top-text h2 {
+       text-align: right;
+       font-size: 31px;
+       color: #000;
+       font-weight: 500;
+       margin: 0;
+       text-transform: uppercase;
+   }
+   a.multi-data-inner-row-col-2-first-div {
+       width: 45%;
+       background: #2ff1ed;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+   }
+   a.multi-data-inner-row-col-2-first-div h1 {
+       font-size: 37px;
+       color: white;
+       width: 47%;
+   }
+   .multi-data-inner-row-col-1-main-heading {
+       width: 100%;
+       margin-bottom: 30px;
+       display: flex;
+       align-items: center;
+       height: 33.33%;
+       justify-content: flex-end;
+   }
+   h1.multi-data-inner-row-col-1-text-heading-1 {
+       font-size: 50px;
+       font-weight: 900;
+       color: #000 !important;
+       line-height: 86px;
+   }
+
+   h1.multi-data-inner-row-col-1-text-heading-2 {
+       font-size: 50px;
+       font-weight: 900;
+       color: #7f7f7f !important;
+       line-height: 86px;
+       margin: 0 5px;
+   }
+   h1.multi-data-inner-row-col-1-text-heading-3 {
+       font-size: 50px;
+       font-weight: 900;
+       color: #000 !important;
+       line-height: 86px;
+   }
+   .multi-data-inner-row-col-1-main-end-text {
+       width: 100%;
+   }
+   .multi-data-inner-row-col-1-main-end-text h1 {
+       text-align: right;
+       height: 33.3%;
+       font-size: 31px;
+       color: #000;
+       font-weight: 500;
+       text-transform: uppercase;
+   }
+   .multi-data-inner-row-col-2-second-div {
+       width: 55%;
+       display: flex;
+       flex-direction: column;
+       gap: 7px;
+   }
+   a.multi-data-inner-row-col-2-second-div-1 {
+       background: #434343;
+       width: 100%;
+       height: 50%;
+       display: flex;
+       align-items: center;
+   }
+   a.multi-data-inner-row-col-2-second-div-1 h1 {
+       color: #fff;
+       font-size: 3.0rem;
+       line-height: 1;
+       text-align: center;
+       width: 100%;
+   }
+   a.multi-data-inner-row-col-2-second-div-2 {
+       background: #c7c7c7;
+       height: 50%;
+       display: flex;
+       align-items: center;
+       width: 100%;
+   }
+   a.multi-data-inner-row-col-2-second-div-2 h1 {
+       color: #fff;
+       font-size: 3.0rem;
+       line-height: 1;
+       width: 100%;
+       text-align: center;
+   }
+   a.multi-data-inner-row-col-2-first-div:hover {
+       opacity: 0.9;
+       transition: .2s ease-in-out;
+       cursor: pointer;
+   }
+   a.multi-data-inner-row-col-2-second-div-1:hover {
+       transition: .2s ease-in-out;
+       background: #4e4e4e;
+       cursor: pointer;
+   }
+   a.multi-data-inner-row-col-2-second-div-2:hover {
+       transition: .2s ease-in-out;
+       background: #4e4e4e;
+       cursor: pointer;
+   }
+
+  @media screen and (max-width:1300px){
+
+    h1.multi-data-inner-row-col-1-text-heading-1,
+    h1.multi-data-inner-row-col-1-text-heading-2,
+    h1.multi-data-inner-row-col-1-text-heading-3 {
+     font-size: 35px;
+     line-height: 1;
+   }
+
+    .multi-data-inner-row-col-1-main-end-text h1 {
+      font-size: 25px;
+    }
+
+    .multi-data-inner-row-col-1-main-heading {
+      margin-bottom: 5px;
+    }
+
+    .multi-data-inner-row-col-1-top-text h2 {
+      font-size: 25px;
+    }
+
+    a.multi-data-inner-row-col-2-first-div h1,
+    a.multi-data-inner-row-col-2-second-div-1 h1,
+    a.multi-data-inner-row-col-2-second-div-2 h1 {
+     font-size: 24px;
+     line-height: 1;
+     text-align: center;
+   }
+  }
+
+   @media screen and (max-width:990px){
+     .multi-data-inner-row-col-1-main-heading {
+       flex-direction: column;
+       height: fit-content;
+     }
+   }
+
+   @media screen and (max-width:768px){
+       .multi-data-inner-row-col {
+           flex-direction: column;
+       }
+       .multi-data-inner-row-col-1 {
+           width: 100%;
+           padding: 28px;
+       }
+       .multi-data-inner-row-col-1-top-text h2 {
+           font-size: 16px;
+       }
+       h1.multi-data-inner-row-col-1-text-heading-1 {
+           font-size: 28px;
+           line-height: 27px;
+       }
+       h1.multi-data-inner-row-col-1-text-heading-2 {
+           font-size: 28px;
+           line-height: 27px;
+           margin: 0 5px;
+       }
+       h1.multi-data-inner-row-col-1-text-heading-3 {
+           font-size: 28px;
+           line-height: 27px;
+       }
+       .multi-data-inner-row-col-1-main-heading {
+           flex-wrap: wrap;
+           margin: 0px 0 0 0;
+           flex-direction: row;
+       }
+       .multi-data-inner-row-col-1-main-end-text h1 {
+           font-size: 16px;
+       }
+       .multi-data-inner-row-col-2 {
+           width: 100%;
+           flex-direction: column;
+       }
+       a.multi-data-inner-row-col-2-first-div {
+           width: 100%;
+           min-height: 90px;
+       }
+       a.multi-data-inner-row-col-2-first-div h1 {
+           font-size: 23px;
+           width: 100%;
+           text-align: center;
+       }
+       .multi-data-inner-row-col-2-second-div {
+           width: 100%;
+           flex-direction: row;
+       }
+       a.multi-data-inner-row-col-2-second-div-1 {
+           width: 50%;
+           min-height: 90px;
+           max-height: 90px;
+       }
+       a.multi-data-inner-row-col-2-second-div-1 h1 {
+           font-size: 16.5px;
+           line-height: 1.2;
+           padding: 18px 10px;
+       }
+       a.multi-data-inner-row-col-2-second-div-2 {
+           width: 50%;
+           min-height: 90px;
+           max-height: 90px;
+       }
+       a.multi-data-inner-row-col-2-second-div-2 h1 {
+           font-size: 17.5px;
+           line-height: 1.2;
+           padding: 18px 10px;
+       }
+   }
+</style>
+{% schema %}
+{
+  "name": "Multi data",
+  "settings": [
+    {
+      "type": "text",
+      "id": "top-text",
+      "label": "Top text"
+    },
+    {
+        "type": "text",
+        "id": "first-text",
+        "label": "First text",
+    },
+    {
+        "type": "text",
+        "id": "second-text",
+        "label": "Second text",
+    },
+    {
+        "type": "text",
+        "id": "third-text",
+        "label": "Third text",
+    },
+    {
+        "type": "text",
+        "id": "end-text",
+        "label": "End text",
+    },
+    {
+        "type": "text",
+        "id": "second-col-text",
+        "label": "Second col text",
+    },
+    {
+        "type": "url",
+        "id": "button_link",
+        "label": "Second button link"
+    },
+    {
+        "type": "text",
+        "id": "third-col-text-1",
+        "label": "Third col text 1",
+    },
+    {
+        "type": "url",
+        "id": "button_link-2",
+        "label": "Third col button link 1"
+    },
+    {
+        "type": "text",
+        "id": "third-col-text-2",
+        "label": "Third col text 2",
+    },
+    {
+        "type": "url",
+        "id": "button_link-3",
+        "label": "Third col button link 2"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Multi data",
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,56 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
+    "sections": {
+      "main": {
+        "type": "main-page",
+        "disabled": true,
+        "settings": {
+          "padding_top": 28,
+          "padding_bottom": 28
+        }
+      },
+      "rich_text_TDUrL8": {
+        "type": "rich-text",
+        "blocks": {
+          "heading_pmLLQ6": {
+            "type": "heading",
+            "settings": {
+              "heading": "Refund Policy",
+              "heading_size": "h1"
+            }
+          },
+          "text_8889pK": {
+            "type": "text",
+            "settings": {
+              "text": "<p>At Ghost Print Lab, we are committed to providing high-quality products and excellent customer service. If you are not completely satisfied with your purchase, please review our refund policy below:</p><h2>Refund Eligibility</h2><p>You may be eligible for a refund under the following conditions:</p><ol><li><strong>Defective or Damaged Items:</strong> If your item arrives damaged, defective, or with a printing error caused by us.</li><li><strong>Incorrect Items:</strong> If the item received does not match your order (e.g., wrong size, color, or design).</li><li><strong>Order Cancellation:</strong> If you cancel your order before it is processed or printed.</li></ol><h2>Refund Conditions</h2><ul><li>Refund requests must be made within <strong>14 days</strong> of receiving your order.</li><li>Items must be unused, unwashed, and in their original condition.</li><li>Proof of purchase (e.g., order confirmation email or receipt) is required.</li><li>Photographic evidence may be required for damaged or defective items.</li></ul><h2>Non-Refundable Items</h2><p>We cannot offer refunds in the following cases:</p><ul><li>Custom t-shirts with incorrect designs or text provided by the customer.</li><li>Items damaged due to misuse, improper care, or wear and tear.</li><li>Orders canceled after printing has started.</li></ul><h2>How to Request a Refund</h2><p>To request a refund, please follow these steps:</p><ol><li><strong>Contact Us:</strong> Email us at <a>support@ghostprintlab.com</a> with your order number and a detailed description of the issue.</li><li><strong>Provide Evidence:</strong> Attach clear photos of the item and any issues (if applicable).</li><li><strong>Wait for Approval:</strong> Our team will review your request and respond within <strong>3-5 business days</strong>.</li></ol><h2>Refund Processing</h2><ul><li>Approved refunds will be issued to the original payment method.</li><li>Refunds may take <strong>5-10 business days</strong> to reflect in your account, depending on your bank or payment provider.</li></ul><h2>Exchanges</h2><p>If you prefer an exchange instead of a refund, we are happy to assist. Please indicate this in your request email.</p><h2>Contact Us</h2><p>If you have any questions about our refund policy, please reach out to us at <a>support@ghostprintlab.com</a>. We’re here to help!</p>"
+            }
+          }
+        },
+        "block_order": [
+          "heading_pmLLQ6",
+          "text_8889pK"
+        ],
+        "settings": {
+          "desktop_content_position": "left",
+          "content_alignment": "left",
+          "color_scheme": "",
+          "full_width": true,
+          "padding_top": 40,
+          "padding_bottom": 52
+        }
+      }
+    },
+    "order": [
+      "main",
+      "rich_text_TDUrL8"
+    ]
+  }
+  

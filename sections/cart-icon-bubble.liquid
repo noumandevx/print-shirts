@@ -1,0 +1,40 @@
+{% assign count_products_cart = 0 %}
+
+{% assign radom_id_save = '' %}
+{%- for item in cart.items -%}
+  {% assign not_bundle_item = true %}
+  {%- for property in item.properties -%}
+    {% if property.first contains 'random' %}
+      {% assign not_bundle_item = false %}
+    {% endif %}
+  {% endfor %}
+  {%- for property in item.properties -%}
+    {% assign should_price_count = false %}
+    {% if not_bundle_item == false and property.first contains 'random' %}
+      {% unless radom_id_save contains property.last %}
+        {% assign count_products_cart = count_products_cart | plus: 1 %}
+        {% assign radom_id_save = radom_id_save | append: property.last | append: ',' %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+  {% if not_bundle_item %}
+    {% assign count_products_cart = count_products_cart | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+{%- liquid
+  if cart == empty
+    render 'icon-cart-empty'
+  else
+    render 'icon-cart'
+  endif
+-%}
+<span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+{%- if cart != empty -%}
+  <div class="cart-count-bubble">
+    {%- if count_products_cart < 100 -%}
+      <span aria-hidden="true">{{ count_products_cart }}</span>
+    {%- endif -%}
+    <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: count_products_cart }}</span>
+  </div>
+{%- endif -%}

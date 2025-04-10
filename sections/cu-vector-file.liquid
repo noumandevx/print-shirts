@@ -1,0 +1,235 @@
+<div class="cu-vector-file-row {% if section.settings.line == true %}active-line{% endif %}">
+  <div class="page-width">
+    <div class="cu-vector-file-iner-row">
+      <div class="cu-vector-file-content">
+        <h2 class="vector-title">{{ section.settings.heading }}</h2>
+        <div class="vector-cotnent">
+          {{ section.settings.text }}
+        </div>
+
+        <div class="vector-file_items">
+          {% for block in section.blocks %}
+            <div class="vector-file_child">
+              {% if block.settings.icon %}
+                <img src="{{ block.settings.icon | img_url:'master' }}">
+              {% endif %}
+              <div class="vector-file_child-title">{{ block.settings.title_1 }}</div>
+              <div class="vector-file_child-text">{{ block.settings.title_2 }}</div>
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="vector-file_points">
+          <h4>{{ section.settings.tip }}</h4>
+          <div class="vector-file_points--inner">
+            {{ section.settings.points }}
+          </div>
+        </div>
+      </div>
+      {% if section.settings.image %}
+        <div class="cu-vector-file-image">
+          <img src="{{ section.settings.image | img_url:'master' }}">
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Cu format box",
+  "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Vector Files"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "tip",
+        "label": "Points title",
+        "default":"Tips:"
+      },
+      {
+        "type": "richtext",
+        "id": "points",
+        "label": "Points text"
+      },
+      {
+        "type": "checkbox",
+        "id": "line",
+        "label": "Bottom line",
+        "default":false
+      }
+  ],
+  "blocks":[
+    {
+      "type" : "format",
+      "name" : "Format info",
+      "settings" : [
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          },
+          {
+            "type": "text",
+            "id": "title_1",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "title_2",
+            "label": "Text"
+          }
+       ]
+    }
+  ],
+  "presets" : [
+    {
+      "name" : "Cu format box"
+    }
+  ]
+}
+{% endschema %}
+<style>
+    .cu-vector-file-iner-row {
+        padding: 60px 0;
+    }
+    .row.align-items-center {
+         display: flex;
+         align-items: center;
+    }
+    .cu-vector-file-iner-row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .cu-vector-file-image {
+      margin-left: auto;
+  }
+
+  .cu-vector-file-image img {
+      max-width: 296px;
+      margin: 0 auto;
+      width: 100%;
+  }
+
+  h2.vector-title {
+      font-size: 44px;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 24px;
+  }
+
+  .vector-cotnent {
+      font-size: 18px;
+      color: #000;
+      font-weight: 400;
+  }
+
+  .vector-cotnent p {
+      line-height: 1.4;
+  }
+
+  .vector-file_items {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 48px 0;
+  }
+
+  .vector-file_child {
+      flex: 0 0 auto;
+      width: 50%;
+  }
+
+  .vector-file_child {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+  }
+
+  .vector-file_child-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 10px;
+  }
+
+  .vector-file_child-text {
+      font-size: 18px;
+  }
+
+  .vector-file_points div {
+      padding: 0 20px;
+  }
+
+  .vector-file_points h4 {
+      font-size: 20px;
+      margin-bottom: 10px;
+  }
+
+  .vector-file_points--inner ul {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 19px;
+      margin-top: 10px;
+  }
+  .cu-vector-file-row.active-line .cu-vector-file-iner-row {
+      border-bottom: 1px solid #ddd;
+  }
+    @media (min-width: 768px) {
+      .cu-vector-file-content {
+          flex: 0 0 auto;
+          width: 58.33333333%;
+      }
+      .cu-vector-file-image {
+          flex: 0 0 auto;
+          width: 25%;
+      }
+    }
+    @media (max-width: 800px) {
+        .cu-vector-file-image {
+            width: 38%;
+        }
+    }
+    @media (max-width:650px){
+      .cu-vector-file-row {
+          padding: 30px 0;
+      }
+
+      h2.vector-title {
+          font-size: 24px;
+          margin-bottom: 8px;
+      }
+
+      .vector-file_items {
+          flex-direction: column;
+          gap: 20px;
+          padding: 28px 0;
+      }
+
+      .cu-vector-file-iner-row {
+          gap: 20px;
+      }
+
+      .cu-vector-file-image {
+          width: 100%;
+      }
+
+      .cu-vector-file-image img {
+          max-width: unset;
+          width: 100%;
+      }
+    }
+</style>

@@ -1,0 +1,176 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="how-it-works-section color-{{ section.settings.color_scheme }} gradient">
+  <div
+    class="page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+    {% if settings.animations_reveal_on_scroll %}
+      data-cascade
+    {% endif %}
+  >
+    <h2 class="how-it-works-text">How It Works – Order in 3 Easy Steps!</h2>
+    <div class="how-it-works-steps">
+      {% for block in section.blocks %}
+        <div class="how-it-works-step">
+          {% if block.settings.step_image %}
+            <div class="how-it-works-icon">
+              <img src="{{ block.settings['step_image'] | img_url: '400px' }}" alt="{{ block.settings['step_image'] }}">
+            </div>
+          {% endif %}
+          {% if block.settings.step_title != '' %}
+            <h3 class="how-it-works-step-title">{{ block.settings.step_title }}</h3>
+          {% endif %}
+          {% if block.settings.step_description != '' %}
+            <p class="how-it-works-step-description">{{ block.settings.step_description }}</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "How It Works",
+  "settings": [
+    {
+      "type": "header",
+      "content": "How It Works Section"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Step Title",
+          "id": "step_title",
+          "default": "Choose Your Product"
+        },
+        {
+          "type": "textarea",
+          "label": "Step Description",
+          "id": "step_description",
+          "default": "T-shirts, hoodies, hats, or custom merchandise."
+        },
+        {
+          "type": "image_picker",
+          "label": "Step Image",
+          "id": "step_image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "How It Works"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  /* Section Styling */
+
+
+  .how-it-works-text {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+  }
+
+  .how-it-works-steps {
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .how-it-works-step {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    flex: 1;
+    width: calc(100% / 3 - 30px);
+    min-width: 250px;
+    max-width: 410px;
+  }
+
+  .how-it-works-step:hover {
+    transform: translateY(-10px);
+  }
+
+  .how-it-works-icon {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .how-it-works-icon img {
+    width: 100%;
+    max-width: 40px;
+    margin: auto;
+  }
+  .how-it-works-icon svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .how-it-works-step-title {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .how-it-works-step-description {
+    font-size: 16px;
+    color: #555;
+  }
+</style>

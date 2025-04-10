@@ -1,0 +1,164 @@
+{% if section.blocks.size > 0 %}
+  <div class="cu-faqs-box-row">
+    <div class="page-width">
+      <div class="cu-faqs-box-inner-row">
+        <h5 class="tabs--top--title">{{ section.settings.text }}</h5>
+        <h3 class="tabs--top--heading">{{ section.settings.heading }}</h3>
+        <div class="cs_accordion">
+          {% for block in section.blocks %}
+            <div class="artwork_faq_box">
+              {% if block.settings.title != '' %}
+                <div class="accordion_heading">
+                  {{ block.settings.title }}
+                  <span class="artwork_faq_box-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                      <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+                    </svg>
+                  </span>
+                </div>
+              {% endif %}
+              {% if block.settings.answer != '' %}
+                <div class="accordion_contents">
+                  {{ block.settings.answer }}
+                </div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+{% schema %}
+{
+  "name": "Cu FAQs box",
+  "settings": [
+     {
+        "type": "text",
+        "id": "text",
+        "label": "Title",
+        "default":"FAQ"
+     },
+     {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Frequently Asked Questions"
+      }
+  ],
+  "blocks":[
+    {
+      "type" : "faqs",
+      "name" : "FAQs",
+      "settings" : [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "answer",
+            "label": "Text"
+          }
+       ]
+    }
+  ],
+  "presets" : [
+    {
+      "name" : "Cu FAQs box"
+    }
+  ]
+}
+{% endschema %}
+<style>
+  .cu-faqs-box-row {
+      padding: 60px 0;
+  }
+  span.artwork_faq_box-icon {
+      width: 12px;
+      display: flex;
+      height: 12px;
+      align-items: center;
+      position: absolute;
+      right: 20px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+  }
+
+  span.artwork_faq_box-icon svg path {
+      stroke-width: 10px;
+  }
+
+  .cu-faqs-box-inner-row {
+      text-align: center;
+  }
+
+  .cu-faqs-box-inner-row h3.tabs--top--heading {
+      margin-bottom: 40px;
+  }
+
+  .accordion_heading {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      padding: 20px 15px;
+      cursor: pointer;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+  }
+
+  .artwork_faq_box {
+      border: 1px solid #e7e7e7;
+      margin-bottom: 15px;
+  }
+
+  .accordion_contents {
+      display: none;
+      padding: 20px;
+      text-align: center;
+      font-size: 18px;
+      color: #000;
+      font-weight: 400;
+      line-height: 1.6;
+  }
+  .artwork_faq_box.active span.artwork_faq_box-icon {
+      transform: rotate(90deg);
+  }
+
+  span.artwork_faq_box-icon {
+      transition: 0.3s ease;
+  }
+  @media (min-width: 801px) {
+
+  }
+  @media (max-width: 800px) {
+    .accordion_heading {
+        padding-right: 40px;
+        text-align: left;
+        font-size: 16px;
+    }
+
+    .accordion_contents {
+        padding: 10px;
+    }
+  }
+  @media (max-width:800px){
+    .cu-faqs-box-row {
+        padding: 20px 0;
+    }
+    .cu-faqs-box-inner-row h3.tabs--top--heading {
+        margin-bottom: 20px;
+    }
+  }
+</style>
+<script>
+   $(".accordion_heading").click(function() {
+    var parent = $(this).parent();
+    $(".artwork_faq_box").not(parent).removeClass('active').find('.accordion_contents').slideUp();
+    parent.toggleClass('active');
+    parent.find('.accordion_contents').slideToggle();
+  });
+</script>

@@ -1,0 +1,239 @@
+<div class="image-text-point-row">
+    <div class="image-text-point-container">
+        <div class="image-text-point-inner-row">
+            <div class="image-text-point-inner-row-col">
+                {% if section.settings.heading != blank %}
+                    <div class="image-text-point-heading">
+                        <h1>{{ section.settings.heading }}</h1>
+                    </div>
+                {% endif %}
+                {% if section.settings.text  != blank %}
+                    <div class="image-text-point-text">
+                        {{ section.settings.text }}
+                    </div>
+                {% endif %}
+                <div class="image-text-point-main-parent-block">
+                    <div class="image-text-point-main-block">
+                        {% if section.settings.video %}
+                            <div class="image-text-point-main-block-col-1">
+                                {{ section.settings.video | video_tag: autoplay: true, loop: true, muted: true, controls: false }}
+                            </div>
+                        {% endif %}
+                        <div class="image-text-point-main-block-col-2">
+                            {% if section.settings.heading-block != blank %}
+                                <div class="image-text-point-main-block-heading">
+                                    <h2>{{ section.settings.heading-block }}</h2>
+                                </div>
+                            {% endif %}
+                            {% for block in section.blocks %}
+                                {% if block.type == "point-block" %}
+                                    <div class="image-text-point-main-block-point-num-col">
+                                        {% if block.settings.index-value != blank %}
+                                            <div class="image-text-point-main-block-point-num">
+                                                <i>{{ block.settings.index-value }}</i>
+                                            </div>
+                                        {% endif %}
+                                        {% if block.settings.point-block != blank %}
+                                            <div class="image-text-point-main-block-point">
+                                                {{ block.settings.point-block }}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .image-text-point-row {
+        width: 100%;
+    }
+    .image-text-point-container {
+        width: 100%;
+    }
+    .image-text-point-inner-row {
+        width: 100%;
+    }
+    .image-text-point-inner-row-col {
+        width: 100%;
+    } 
+    .image-text-point-heading {
+        width: 100%;
+        margin: 48px 0 0 0;
+    }
+    .image-text-point-heading h1 {
+        font-weight: 500;
+        line-height: 1.1;
+        color: #000;
+        text-transform: uppercase;
+        margin: 0;
+        font-size: 48px;
+        text-align: center;
+    }
+    .image-text-point-text {
+        width: 100%;
+        margin: 16px 0 0 0;
+    }
+    .image-text-point-text p {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 140%;
+        text-align: center;
+        color: black;
+    }
+    .image-text-point-main-parent-block {
+        width: 100%;
+    }
+    .image-text-point-main-block {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 49px 0 35px 0;
+    }
+    .image-text-point-main-block-col-1 {
+        width: 50%;
+    }
+    .image-text-point-main-block-col-2 {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .image-text-point-main-block-col-1 video {
+        width: 100%;
+    }
+    .image-text-point-main-block-heading h2 {
+        font-size: 30px;
+        color: #000000;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+    }
+    .image-text-point-main-block-heading {
+        width: 60%;
+        margin: 0 0 40px 0;
+    }
+    .image-text-point-main-block-point-num-col {
+        display: flex;
+        width: 60%;
+    }
+    .image-text-point-main-block-point-num-col {
+        display: flex;
+        width: 60%;
+        gap: 48px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+        margin-bottom: 24px;
+    }
+    .image-text-point-main-block-point-num i {
+        font-size: 24px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 130%;
+        color: black;
+    }
+    .image-text-point-main-block-point p {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        color: black;
+        margin: 0;
+    }
+    @media screen and (max-width:768px){
+        .image-text-point-heading {
+            display: flex;
+            justify-content: center;
+        }
+        .image-text-point-main-block-heading {
+            width: 90% !important;
+        }
+      
+        .image-text-point-heading h1,
+      .image-text-point-main-block-heading h2 {
+          font-size: 22px;
+          line-height: 1;
+          width: 95%;
+        }
+      
+        .image-text-point-text p {
+            width: 91%;
+        }
+        .image-text-point-text {
+            display: flex;
+            justify-content: center;
+        }
+        .image-text-point-main-block {
+            padding: 40px 0 30px;
+            flex-direction: column;
+        }
+        .image-text-point-main-block-col-1 {
+            width: 100%;
+        }
+        .image-text-point-main-block-col-2 {
+            align-items: flex-start;
+            padding: 40px 20px 0;
+            width: 100% !important;
+        }
+        .image-text-point-main-block-point-num-col {
+            width: 100%;
+        }
+    }
+</style>
+{% schema %}
+{
+  "name": "Image text point",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+    },
+    {
+        "type": "video",
+        "id": "video",
+        "label": "Video"
+    },
+     {
+        "type": "text",
+        "id": "heading-block",
+        "label": "Heading",
+    }
+  ],
+  "blocks": [
+     {
+        "name": "Point block",
+        "type": "point-block",
+        "settings": [
+            {
+                "type": "text",
+                "id": "index-value",
+                "label": "Number",
+            },
+            {
+                "type": "richtext",
+                "id": "point-block",
+                "label": "Point"
+            }
+        ]
+      }
+  ],
+  "presets": [
+    {
+      "name": "Image text point",
+    }
+  ]
+}
+{% endschema %}

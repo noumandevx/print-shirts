@@ -1,0 +1,27 @@
+{% if product.metafields.custom.size_guide %}
+    <div class="size_guide-row">
+        {% if block.settings.heaidng != '' %}
+            <h2 class="size_guide-title">{{ block.settings.heaidng }}</h2>
+        {% endif %}
+        {% if block.settings.deacription != '' %}
+            <p class="size_guide-info">
+                {{ block.settings.deacription }}
+            </p>
+        {% endif %}
+        <div class="size_guide-sizes">
+            <div class="size_guide-one-size-wrapper">
+                {% for meta in product.metafields.custom.size_guide.value %}
+                    <div class="size_guide-one-size-wrapper-col">
+                        <div class="size_guide-one-size-name">{{ meta.size }}</div>
+                        <div class="size_guide-one-size-in active" data-id="in">{{  meta.size_in }}</div>
+                        <div class="size_guide-one-size-cm" data-id="cm">{{  meta.size_cm }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="size_guide-select">
+                <div class="size_guide-select-block active" data-id="in">IN</div>
+                <div class="size_guide-select-block" data-id="cm">CM</div>
+            </div>
+        </div>
+    </div>
+{% endif %}

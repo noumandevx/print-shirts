@@ -1,0 +1,40 @@
+.brand-logo__title {
+  font-size: 80px;
+  line-height: initial;
+}
+
+.brand-logo__text {
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.1px;
+  font-family: "outfit-light";
+}
+
+.brand-logo__items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.brand-logo__item {
+  flex: 0 0 15.5%;
+}
+@media (max-width: 768px) {
+  .brand-logo__main {
+    margin: 40px 0;
+  }
+  .brand-logo__title {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .brand-logo__text {
+    line-height: 20.16px;
+  }
+  .brand-logo__container {
+    margin-top: 20px;
+  }
+  .brand-logo__item {
+    flex: 0 0 33.33%;
+  }
+}

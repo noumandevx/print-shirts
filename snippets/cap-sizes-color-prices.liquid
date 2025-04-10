@@ -1,0 +1,98 @@
+{% assign product_color = all_products['number-of-colors'] %}
+{% comment %}
+{% assign product_color = product_color[0] %}
+{% assign product_stiches = product_stiches[0] %}
+{% assign product_stiches = collections.all.products | where: 'id', 9507592798505 %}
+{% assign product_sizes = product_sizes[0] %}
+{% endcomment %}
+{% assign product_stiches = all_products['number-of-stitches'] %}
+
+{% assign product_sizes = all_products['cap-print-size'] %}
+
+<script id="priceData" type="application/json">
+[
+  {%- for color_variant in product_color.variants -%}
+    {%- if forloop.index == 1 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 4.31, "24": 3.39, "72": 2.99, "144": 2.61, "216": 2.47, "288": 2.35, "505": 2.22, "745": 2.1, "1009": 1.98, "1249": 1.87, "3000": 1.76 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 2 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 5.38, "24": 4.23, "72": 3.73, "144": 3.26, "216": 3.08, "288": 2.93, "505": 2.77, "745": 2.62, "1009": 2.47, "1249": 2.33, "3000": 2.22 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 3 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 6.46, "24": 5.08, "72": 4.48, "144": 3.91, "216": 3.7, "288": 3.52, "505": 3.33, "745": 3.15, "1009": 2.97, "1249": 2.8, "3000": 2.64 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 4 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 7.54, "24": 5.93, "72": 5.23, "144": 4.56, "216": 4.32, "288": 4.11, "505": 3.88, "745": 3.67, "1009": 3.46, "1249": 3.27, "3000": 3.08 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 5 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 8.62, "24": 6.78, "72": 5.98, "144": 5.22, "216": 4.94, "288": 4.7, "505": 4.44, "745": 4.2, "1009": 3.96, "1249": 3.74, "3000": 3.52 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 6 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 9.69, "24": 7.62, "72": 6.72, "144": 5.87, "216": 5.55, "288": 5.28, "505": 4.99, "745": 4.72, "1009": 4.45, "1249": 4.2, "3000": 3.96 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 7 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 10.77, "24": 8.47, "72": 7.47, "144": 6.52, "216": 6.17, "288": 5.87, "505": 5.55, "745": 5.25, "1009": 4.95, "1249": 4.67, "3000": 4.4 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 8 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 11.85, "24": 9.32, "72": 8.22, "144": 7.17, "216": 6.79, "288": 6.46, "505": 6.1, "745": 5.77, "1009": 5.44, "1249": 5.14, "3000": 4.84 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 9 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 12.93, "24": 10.17, "72": 8.97, "144": 7.83, "216": 7.41, "288": 7.05, "505": 6.66, "745": 6.3, "1009": 5.94, "1249": 5.61, "3000": 5.28 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 10 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 14.0, "24": 11.01, "72": 9.71, "144": 8.48, "216": 8.02, "288": 7.63, "505": 7.21, "745": 6.82, "1009": 6.43, "1249": 6.07, "3000": 5.72 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 11 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 15.08, "24": 11.86, "72": 10.46, "144": 9.13, "216": 8.64, "288": 8.22, "505": 7.77, "745": 7.35, "1009": 6.93, "1249": 6.54, "3000": 6.16 } }{% unless forloop.last %},{% endunless %}
+    {%- endif -%}
+  {%- endfor -%}{%- if product_stiches != blank -%},{%- endif -%}
+  
+  {%- for color_variant in product_stiches.variants -%}
+    {%- if forloop.index == 1 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 5.99, "24": 5.45, "72": 4.95, "144": 4.5, "433": 4.05, "1200": 3.65 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 2 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 6.59, "24": 5.99, "72": 5.45, "144": 4.95, "433": 4.46, "1200": 4.01 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 3 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 7.25, "24": 6.49, "72": 5.99, "144": 5.45, "433": 4.9, "1200": 4.41 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 4 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 7.97, "24": 7.25, "72": 6.59, "144": 5.99, "433": 5.39, "1200": 4.85 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 5 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 8.77, "24": 7.97, "72": 7.25, "144": 6.59, "433": 5.93, "1200": 5.34 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 6 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 9.65, "24": 8.77, "72": 7.97, "144": 7.25, "433": 6.52, "1200": 5.87 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 7 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 10.61, "24": 9.65, "72": 8.77, "144": 7.97, "433": 7.17, "1200": 6.46 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 8 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 11.67, "24": 10.61, "72": 9.65, "144": 8.77, "433": 7.89, "1200": 7.1 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 9 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 12.46, "24": 11.4, "72": 10.28, "144": 9.33, "433": 8.39, "1200": 7.47 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 10 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 13.25, "24": 12.19, "72": 10.91, "144": 9.89, "433": 8.89, "1200": 7.84 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 11 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 14.04, "24": 12.98, "72": 11.54, "144": 10.45, "433": 9.93, "1200": 8.21 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 12 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 14.83, "24": 13.77, "72": 12.17, "144": 11.01, "433": 9.89, "1200": 8.58 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 13 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 15.62, "24": 14.56, "72": 12.8, "144": 11.57, "433": 10.39, "1200": 8.95 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 14 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 16.41, "24": 15.35, "72": 13.43, "144": 12.13, "433": 10.89, "1200": 9.32 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 15 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 17.2, "24": 16.14, "72": 14.06, "144": 12.69, "433": 11.39, "1200": 9.69 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 16 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 17.99, "24": 16.93, "72": 14.69, "144": 13.25, "433": 11.89, "1200": 10.06 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 17 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 18.78, "24": 17.72, "72": 15.32, "144": 13.81, "433": 12.39, "1200": 10.43 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 18 -%}
+    { "id": {{ color_variant.id }}, "price": { "12": 19.57, "24": 18.51, "72": 15.95, "144": 14.37, "433": 12.89, "1200": 10.8 } }{% unless forloop.last %},{% endunless %}
+    {%- endif -%}
+  {%- endfor -%}{%- if product_sizes != blank -%},{%- endif -%}
+
+    {%- for color_variant in product_sizes.variants -%}
+      {%- if forloop.index == 1 -%}
+    { "id": {{ color_variant.id }}, "price": { "19": 6.13, "49": 4.71, "99": 3.93, "199": 3.57, "299": 3.21, "499": 2.89, "999": 2.60, "2499": 2.34, "4999": 2.11, "20000": 1.90 } }{% unless forloop.last %},{% endunless %}
+      {%- elsif forloop.index == 2 -%}
+    { "id": {{ color_variant.id }}, "price": { "19": 7.48, "49": 5.76, "99": 4.80, "199": 4.36, "299": 3.92, "499": 3.53, "999": 3.18, "2499": 2.86, "4999": 2.57, "20000": 2.32 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 3 -%}
+      { "id": {{ color_variant.id }}, "price": { "19": 9.61, "49": 7.39, "99": 6.16, "199": 5.6, "299": 5.04, "499": 4.54, "999": 4.08, "2499": 3.67, "4999": 3.31, "20000": 2.98 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 4 -%}
+      { "id": {{ color_variant.id }}, "price": { "19": 15.34, "49": 11.80, "99": 9.83, "199": 8.94, "299": 8.85, "499": 7.97, "999": 7.17, "2499": 6.45, "4999": 5.81, "20000": 5.23 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 5 -%}
+      { "id": {{ color_variant.id }}, "price": { "19": 15.34, "49": 11.80, "99": 9.83, "199": 8.94, "299": 8.85, "499": 7.97, "999": 7.17, "2499": 6.45, "4999": 5.81, "20000": 5.23 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 6 -%}
+      { "id": {{ color_variant.id }}, "price": { "19": 15.34, "49": 11.80, "99": 9.83, "199": 8.94, "299": 8.85, "499": 7.97, "999": 7.17, "2499": 6.45, "4999": 5.81, "20000": 5.23 } }{% unless forloop.last %},{% endunless %}
+    {%- elsif forloop.index == 7 -%}
+      { "id": {{ color_variant.id }}, "price": { "19": 15.34, "49": 11.80, "99": 9.83, "199": 8.94, "299": 8.85, "499": 7.97, "999": 7.17, "2499": 6.45, "4999": 5.81, "20000": 5.23 } }{% unless forloop.last %},{% endunless %}
+    {%- endif -%}
+  {%- endfor -%}
+]
+</script>

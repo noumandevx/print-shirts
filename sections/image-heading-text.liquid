@@ -1,0 +1,135 @@
+<div class="image-heading-text-row">
+    <div class="image-heading-text-container page-width">
+        <div class="image-heading-text-inner-row">
+            <div class="image-heading-text-inner-row-col{% if section.settings.row-reverse %} reverse{% endif %}">
+                {% if section.settings.image  %}
+                    <div class="image-heading-text-inner-row-col-1">
+                        <img src="{{ section.settings.image | img_url:'master'}}">
+                    </div>
+                {% endif %}
+                <div class="image-heading-text-inner-row-col-2">
+                    {% if section.settings.heading != blank %}
+                        <div class="image-heading-text-inner-row-main-heading">
+                            <h2>{{ section.settings.heading }}</h2>
+                        </div>
+                    {% endif %}
+                    {% if section.settings.info != blank %}
+                        <div class="image-heading-text-inner-row-main-info">
+                            {{ section.settings.info }}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .reverse {
+        flex-direction: row-reverse;
+    }
+    .image-heading-text-row {
+        width: 100%;
+        padding: 50px 0;
+    }
+    .image-heading-text-container {
+        width: 100%;
+    }
+    .image-heading-text-inner-row {
+        width: 100%;
+    }
+    .image-heading-text-inner-row-col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .image-heading-text-inner-row-col-1 {
+        width: 50%;
+        padding: 0 25px;
+    }
+    .image-heading-text-inner-row-col-1 img {
+        width: 100%;
+    }
+    .image-heading-text-inner-row-col-2 {
+        width: 50%;
+        padding: 0 25px;
+    }
+    .image-heading-text-inner-row-main-heading h2 {
+        font-size: 28px;
+        margin: 0;
+        font-weight: 400;
+        text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .image-heading-text-inner-row-main-heading {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .image-heading-text-inner-row-main-info p {
+        font-size: 16px;
+        line-height: 1.4;
+        padding: 0 0 1.5em 0;
+        margin: 0;
+    }
+    .image-heading-text-inner-row-main-info {
+        width: 100%;
+    }
+    @media screen and (max-width:768px){
+      .image-heading-text-row {
+        padding: 25px 0;
+      }
+      .image-heading-text-inner-row-col {
+        flex-direction: column;
+      }
+      .image-heading-text-inner-row-col-1 {
+        width: 100%;
+        padding: 0;
+      }
+      .image-heading-text-inner-row-col-2 {
+        width: 100%;
+        padding: 25px 0 0 0;
+      }
+      .image-heading-text-inner-row-main-info p {
+        font-size: 14px;
+      }
+
+      .image-heading-text-inner-row-main-heading h2 {
+        font-size: 22px;
+        line-height: 1;
+      }
+    }
+</style>
+{% schema %}
+{
+  "name": "Image section",
+  "settings": [
+    {
+        "type": "checkbox",
+        "id": "row-reverse",
+        "label": "Row reverse",
+        "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+    },
+    {
+        "type": "richtext",
+        "id": "info",
+        "label": "Info"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image section",
+    }
+  ],
+
+}
+{% endschema %}

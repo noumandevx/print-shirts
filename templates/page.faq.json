@@ -1,0 +1,167 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_kweKh8": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_MJnKT9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Frequently Asked Questions",
+            "heading_size": "h1"
+          }
+        },
+        "text_XmnRtc": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>1. Can I order custom t-shirts in bulk?</strong><br/>Yes, we offer seamless bulk ordering options with competitive pricing. You can place large orders directly through our website.</p>"
+          }
+        },
+        "text_9UgXQ3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>2. What file formats are accepted for custom designs?</strong><br/>We accept popular formats like PNG, JPEG, and SVG. Make sure your design is high-resolution for the best print quality.</p>"
+          }
+        },
+        "text_Hq4CRG": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>3. How long does it take to receive my order?</strong><br/>Our standard turnaround time is 5–7 business days, but bulk orders may take slightly longer. We also offer expedited shipping options.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MJnKT9",
+        "text_XmnRtc",
+        "text_9UgXQ3",
+        "text_Hq4CRG"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "banner_section_tnjKeR": {
+      "type": "banner-section",
+      "settings": {
+        "heading": "Help & FAQs",
+        "info": "<p>Got a question about our apparel services? We’ll try to answer it below.<br/>If you need something specific, get a <a href=\"/pages/contact\" title=\"Contact\">custom quote</a>.</p>"
+      }
+    },
+    "faqs_section_fDp73m": {
+      "type": "FAQS-section",
+      "blocks": {
+        "slide_ETmdH4": {
+          "type": "slide",
+          "settings": {
+            "main-text": "What types of printing services do you offer?",
+            "scroll-text": "<p>We provide screen printing, direct-to-garment (DTG) printing, embroidery, and vinyl printing for various apparel and accessories.</p>"
+          }
+        },
+        "slide_pnpqhz": {
+          "type": "slide",
+          "settings": {
+            "main-text": "Can I order a single custom-printed item, or is there a minimum order quantity?",
+            "scroll-text": "<p>Yes! We offer no minimum order for DTG printing, but screen printing and embroidery may require a minimum quantity.</p>"
+          }
+        },
+        "slide_YdzKii": {
+          "type": "slide",
+          "settings": {
+            "main-text": "Do you offer bulk discounts?",
+            "scroll-text": "<p>Yes! We provide discounts for bulk orders. The more you order, the lower the per-unit cost. Contact us for a <a href=\"https://ghostprintlab.com/pages/contact\"><span style=\"text-decoration:underline\">custom quote</span></a>.</p>"
+          }
+        },
+        "slide_VcLdN4": {
+          "type": "slide",
+          "settings": {
+            "main-text": "How do I place an order for custom printing?",
+            "scroll-text": "<p>Simply browse our Quick Order section, select your preferred item, upload your design, and place an order. If you need a specific brand or style, request a <a href=\"https://ghostprintlab.com/pages/contact\"><span style=\"text-decoration:underline\">custom quote</span></a>.</p>"
+          }
+        },
+        "slide_rLmKxm": {
+          "type": "slide",
+          "settings": {
+            "main-text": "What file formats do you accept for custom designs?",
+            "scroll-text": "<p>We accept PNG, SVG, AI, PDF, and high-resolution JPEG files for the best printing results.</p>"
+          }
+        },
+        "slide_dJxya7": {
+          "type": "slide",
+          "settings": {
+            "main-text": "Can I see a sample before my full order is printed?",
+            "scroll-text": "<p>Yes! We can provide digital proofs before production starts. For bulk orders, we also offer physical samples upon request.</p>"
+          }
+        },
+        "slide_PjnqnU": {
+          "type": "slide",
+          "settings": {
+            "main-text": "How long does it take to receive my order?",
+            "scroll-text": "<p>Our standard turnaround time is 5-7 business days, but we also offer express production for urgent orders.</p>"
+          }
+        },
+        "slide_T8dt9m": {
+          "type": "slide",
+          "settings": {
+            "main-text": "What if my order arrives damaged or incorrect?",
+            "scroll-text": "<p>If your order is damaged or incorrect, please contact us within 48 hours, and we will arrange a replacement or refund as per our return policy.</p>"
+          }
+        },
+        "slide_aBYgtm": {
+          "type": "slide",
+          "settings": {
+            "main-text": "Do you offer custom branding, such as neck labels and packaging?",
+            "scroll-text": "<p>Yes! We provide custom labels, tag removal, and personalized packaging to enhance your brand identity.</p>"
+          }
+        },
+        "slide_mjMtFx": {
+          "type": "slide",
+          "settings": {
+            "main-text": "Do you offer design assistance if I don't have a print-ready file?",
+            "scroll-text": "<p>Yes! Our in-house design team can assist you in preparing your artwork for the best printing results.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "slide_ETmdH4",
+        "slide_pnpqhz",
+        "slide_YdzKii",
+        "slide_VcLdN4",
+        "slide_rLmKxm",
+        "slide_dJxya7",
+        "slide_PjnqnU",
+        "slide_T8dt9m",
+        "slide_aBYgtm",
+        "slide_mjMtFx"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_kweKh8",
+    "banner_section_tnjKeR",
+    "faqs_section_fDp73m"
+  ]
+}

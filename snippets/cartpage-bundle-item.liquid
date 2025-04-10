@@ -1,0 +1,162 @@
+{% comment %} <h1 style="color:red">{{ random_id }}</h1> {% endcomment %}
+{% assign bundle_size = '' %}
+{% assign bundle_color = '' %}
+{% assign bundle_qty = '' %}
+{% assign total_price = 0 %}
+{% assign bundle_keys = '' %}
+{% assign child_bundle_keys = '' %}
+
+{%- for bundle_item in cart.items -%}
+  {%- for bundle_prop in bundle_item.properties -%}
+    {% if bundle_prop.last contains random_id %}
+
+      {% assign parent_product = false %}
+      {%- for inner_bundle_prop in bundle_item.properties -%}
+        {% if inner_bundle_prop.first contains 'parent_prop' %}
+          {% assign parent_product = true %}
+        {% endif %}
+
+        {% if inner_bundle_prop.first contains 'price' %}
+          {% assign total_price = inner_bundle_prop.last | times: 100 %}
+        {% endif %}
+      {% endfor %}
+
+      {% if parent_product %}
+        {% comment %} {% assign bundle_qty = bundle_qty | plus: bundle_item.quantity %} {% endcomment %}
+        {% assign bundle_keys = bundle_keys | append: bundle_item.key | append: ',' %}
+        {% assign bundle_qty = bundle_qty | append: bundle_item.quantity | append: ',' %}
+        {% comment %} {% assign total_price = total_price | plus: bundle_item.original_line_price %} {% endcomment %}
+
+        {%- for option in bundle_item.options_with_values -%}
+          {% if option.name == 'Size' or option.name == 'size' %}
+            {% assign bundle_size = bundle_size | append: option.value | append: ',' %}
+          {% endif %}
+          {% comment %}
+          {% if option.name == 'Color' or option.name == 'color' %}
+            {% assign bundle_color = bundle_color | append: option.value | append: ',' %}
+          {% endif %}
+          {% endcomment %}
+        {% endfor %}
+        {%- for inner_bundle_prop in bundle_item.properties -%}
+          {% if inner_bundle_prop.first contains 'Color' %}
+            {% assign bundle_color = bundle_color | append: inner_bundle_prop.last | append: ',' %}
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        {% assign child_bundle_keys = child_bundle_keys | append: bundle_item.key | append: '=' |  append: bundle_item.quantity |  append: ','  %}
+      {% endif %}
+
+    {% endif %}
+  {%- endfor -%}
+{%- endfor -%}
+
+<tr class="cart-item bundle_item" id="CartItem-{{ main_item.index | plus: 1 }}">
+  <td class="cart-item__media">
+    {% if main_item.image %}
+      {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
+      <a href="{{ main_item.url }}" class="cart-item__link" aria-hidden="true" tabindex="-1"> </a>
+      <div class="cart-item__image-container gradient global-media-settings">
+        <img
+          src="{{ main_item.image | image_url: width: 300 }}"
+          class="cart-item__image"
+          alt="{{ main_item.image.alt | escape }}"
+          loading="lazy"
+          width="150"
+          height="{{ 150 | divided_by: main_item.image.aspect_ratio | ceil }}"
+        >
+      </div>
+    {% endif %}
+  </td>
+
+  <td class="cart-item__details">
+    {%- if settings.show_vendor -%}
+      <p class="caption-with-letter-spacing">{{ main_item.product.vendor }}</p>
+    {%- endif -%}
+
+    <a href="{{ main_item.url }}" class="cart-item__name h4 break">{{ main_item.product.title | escape }}</a>
+
+    <dl>
+      {%- for option in main_item.options_with_values -%}
+        {% if option.name == 'Color' or option.name == 'color' %}
+          <div class="product-option">
+            <dt>{{ option.name }}:</dt>
+            <dd>{{ option.value }}</dd>
+          </div>
+        {% endif %}
+      {%- endfor -%}
+    </dl>
+
+    {% comment %} <div class="product-option">
+      {{ main_item.original_price | money }}
+    </div> {% endcomment %}
+  </td>
+
+  <td class="cart-item__color">
+    {% assign bundle_color = bundle_color | split: ',' %}
+    {% for val in bundle_color %}
+      <p class="cart-item__color-item">{{ val }}</p>
+    {% endfor %}
+  </td>
+
+  <td class="cart-item__size">
+    {% assign bundle_size = bundle_size | split: ',' %}
+    {% for val in bundle_size %}
+      <p class="cart-item__size-item">{{ val }}</p>
+    {% endfor %}
+  </td>
+
+  <td class="cart-item__quantity">
+    {% assign bundle_qty = bundle_qty | split: ',' %}
+    <div class="cart-item__quantity-detail">
+      {% for val in bundle_qty %}
+        {% comment %} <p class="cart-item__quantity-val">{{ bundle_qty }}</p> {% endcomment %}
+        <p class="cart-item__quantity-val">{{ val }}</p>
+      {% endfor %}
+    </div>
+  </td>
+
+  <td class="cart-item__print">
+    <div class="cip__wrapper">
+      <div class="cip__wrapper-main">
+        {%- for prin_prop in main_item.properties -%}
+          {% if prin_prop.first == 'Print' %}
+            {% assign print_data = prin_prop.last | split: '||' %}
+            {% for print_line in print_data %}
+              {% assign print_item = print_line | split: '/' %}
+              <div class="cart-item__print-items">
+                {% for print_value in print_item %}
+                  <div class="cart-item__print-item">{{ print_value }}</div>
+                {% endfor %}
+              </div>
+            {%- endfor -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </td>
+
+  <td class="cart-item__totals right">
+    <div class="cart-item__price-wrapper">
+      <span class="price price--end">
+        {{ total_price | money }}
+      </span>
+    </div>
+          <div class="car_bundle_remove_btn">
+        <div class="cart_remove_icon">
+          {% render 'icon-remove' %}
+          {%- render 'loading-spinner' -%}
+        </div>
+        <div class="cart_remove_items">
+          {% assign bundle_key_list = bundle_keys | split: ',' %}
+          {% for key in bundle_key_list %}
+            <input type="hidden" value="{{key}}">
+          {% endfor %}
+          {% assign child_bundle_keys_list = child_bundle_keys | split: ',' %}
+          {% for key in child_bundle_keys_list %}
+            {% assign key_split = key | split: '=' %}
+            <input type="hidden" value="{{ key_split.first }}" child_qty="{{key_split.last}}" >
+          {% endfor %}
+        </div>
+      </div>
+  </td>
+</tr>

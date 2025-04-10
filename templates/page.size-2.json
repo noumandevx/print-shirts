@@ -1,0 +1,113 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_text_point_xp4dRA": {
+      "type": "image-text-point",
+      "blocks": {
+        "point_block_7WhBRw": {
+          "type": "point-block",
+          "settings": {
+            "index-value": "01",
+            "point-block": "<p>Measure the internal diameter of a ring you own that mirrors the fit you want for your new piece.</p>"
+          }
+        },
+        "point_block_nRWV3A": {
+          "type": "point-block",
+          "settings": {
+            "index-value": "02",
+            "point-block": "<p>Place the band of your ring on the chart to find which letter is your ring size.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "point_block_7WhBRw",
+        "point_block_nRWV3A"
+      ],
+      "settings": {
+        "heading": "T-Shirt (Half Sleeve) GUIDELINES",
+        "text": "<p>Time to find you perfect fit. Choose a finger or your own ring for measuring and let's get started</p>",
+        "video": "shopify://files/videos/fd2a1af0600f47c380412d84dceb38a8.webm",
+        "heading-block": "MEASURE A RING YOU OWN"
+      }
+    },
+    "image_text_point_CqUtLE": {
+      "type": "image-text-point",
+      "blocks": {
+        "point_block_qYGffQ": {
+          "type": "point-block",
+          "settings": {
+            "index-value": "01",
+            "point-block": "<p>Measure the lines marked A and B to confirm your page is the right size.</p>"
+          }
+        },
+        "point_block_FFcC4d": {
+          "type": "point-block",
+          "settings": {
+            "index-value": "02",
+            "point-block": "<p>Cut around the ring sizer's serrated lines and the slit at the top.</p>"
+          }
+        },
+        "point_block_FEQKYm": {
+          "type": "point-block",
+          "settings": {
+            "index-value": "03",
+            "point-block": "<p>Push the opposite end of your sizer through the slit and place on your finger.</p>"
+          }
+        },
+        "point_block_PAdt9D": {
+          "type": "point-block",
+          "settings": {
+            "index-value": "04",
+            "point-block": "<p>Check the line and make a note of your letter, then match up with our table.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "point_block_qYGffQ",
+        "point_block_FFcC4d",
+        "point_block_FEQKYm",
+        "point_block_PAdt9D"
+      ],
+      "settings": {
+        "heading": "",
+        "text": "",
+        "video": "shopify://files/videos/010ba8e97aa04832a7de2099c0fbf1ea.webm",
+        "heading-block": "MEASURE YOUR FINGER"
+      }
+    },
+    "custom_table_box_mht3Pi": {
+      "type": "custom-table-box",
+      "settings": {
+        "heading": "T-Shirt (Half Sleeve) GUIDELINES",
+        "page": "size-chart-half-sleeve",
+        "bg_color": "#ffffff",
+        "padding-top": 10,
+        "padding-bottom": 10,
+        "padding-top-mobile": 10,
+        "padding-bottom-mobile": 10
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_text_point_xp4dRA",
+    "image_text_point_CqUtLE",
+    "custom_table_box_mht3Pi"
+  ]
+}

@@ -1,0 +1,175 @@
+<div class="cu-banner-box-row">
+  <div class="cu-banner-box-iner-row">
+    {% if section.settings.heading != '' %}
+      <div class="cu-banner-box-content">
+        <div class="row align-items-center">
+          <div class="col-content">
+            {% if section.settings['sub-title'] != '' %}
+              <h5>{{ section.settings['sub-title'] }}</h5>
+            {% endif %}
+            <h1 class="cs-title">{{ section.settings.heading }}</h1>
+            {% if section.settings.btn != '' %}
+              <a href="{{ section.settings.link }}" class="cu-btn">{{ section.settings.btn }}</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+    {% if section.settings.image %}
+      <div class="banner_image_right noborderonimage">
+        <img src="{{ section.settings.image | img_url:'master' }}">
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Cu banner box",
+  "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "sub-title",
+        "label": "Sub title",
+        "default": "Artwork Guidelines"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "How to format files for print"
+      },
+      {
+        "type": "text",
+        "id": "btn",
+        "label": "Button",
+        "default":"GET HELP"
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Button link"
+      }
+  ],
+  "presets" : [
+    {
+      "name" : "Cu banner box"
+    }
+  ]
+}
+{% endschema %}
+<style>
+  .cu-banner-box-row {
+      background-color: #E5E5E5;
+      background-size: cover;
+      background-position: left center;
+      background-repeat: no-repeat;
+      padding: 60px 0;
+  }
+
+  .cu-banner-box-content {
+      margin:0 auto;
+  }
+  .row.align-items-center {
+       display: flex;
+       align-items: center;
+  }
+
+  .banner_image_right.noborderonimage {
+      position: absolute;
+      width: 45%;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      border: unset;
+      padding: 40px 20px;
+      text-align: left;
+  }
+
+  .cu-banner-box-iner-row {
+      position: relative;
+  }
+  .col-content {
+      position: relative;
+      z-index: 3;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      flex: 0 0 auto;
+      width: 50%;
+  }
+  .col-content h5 {
+      background: #2ff1ed;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 34px;
+      margin-bottom: 15px;
+  }
+
+  h1.cs-title {
+      font-size: 54px;
+      line-height: 1;
+      margin-bottom: 40px;
+  }
+
+  a.cu-btn {
+      width: fit-content;
+      display: flex;
+      height: fit-content;
+      font-size: 16px;
+      font-weight: 600;
+      color: white;
+      background: #1a1818;
+      border-radius: 40px;
+      padding: 10px 30px;
+  }
+  @media (min-width: 1200px) {
+      .cu-banner-box-content {
+          max-width: 1280px;
+      }
+      .cu-banner-box-content .row.align-items-center {
+          min-height: 450px;
+      }
+  }
+  @media (max-width:650px){
+    .cu-banner-box-iner-row {
+        flex-direction: column;
+        display: flex;
+    }
+
+    .banner_image_right.noborderonimage {
+        position: unset;
+        width: 100%;
+    }
+
+    .cu-banner-box-content {
+        padding: 0 12px;
+    }
+
+    .cu-banner-box-content .col-content {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1.cs-title {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .col-content h5 {
+        font-size: 22px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .cu-banner-box-row {
+        padding: 20px 0;
+    }
+  }
+</style>

@@ -1,0 +1,267 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "cu_banner_box_yBX4AG": {
+      "type": "cu-banner-box",
+      "settings": {
+        "image": "shopify://shop_images/artwork-header-2_jpg.webp",
+        "sub-title": "Artwork Guidelines",
+        "heading": "How to format files for print",
+        "btn": "GET HELP",
+        "link": "#"
+      }
+    },
+    "cu_vector_file_KYV3q4": {
+      "type": "cu-vector-file",
+      "blocks": {
+        "format_6Xfn7c": {
+          "type": "format",
+          "settings": {
+            "icon": "shopify://shop_images/icons8-image-file_68448e35-36d2-4319-8fda-8be175a44396.svg",
+            "title_1": "Popular File Types:",
+            "title_2": "<p>.AI, .EPS, .PDF, .SVG</p>"
+          }
+        },
+        "format_hUcayL": {
+          "type": "format",
+          "settings": {
+            "icon": "shopify://shop_images/search-plus-svgrepo-com_12e2bda8-3232-42da-a708-aaabc6bfa8a5.svg",
+            "title_1": "Common Examples:",
+            "title_2": "<p>Logos, text, digital artwork</p>"
+          }
+        }
+      },
+      "block_order": [
+        "format_6Xfn7c",
+        "format_hUcayL"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/ArtGuidelines_VectorImage_Cropped-1-min_jpg.webp",
+        "heading": "Vector Files",
+        "text": "<p>Vector files are recommended for the highest-quality print. These are ideal for artwork with areas of solid color or text that we print using a method called spot printing. Vectors are objects, so no matter how much you enlarge the graphic it will remain crisp and clear, allowing for more flexibility. It is ideal for logos and brand graphics.</p>",
+        "tip": "Tips:",
+        "points": "<ul><li>Ensure there are no raster images embedded in the file.</li><li>Please convert all text areas to outlines.</li><li>Refrain from expanding elements with gradients.</li></ul>",
+        "line": true
+      }
+    },
+    "cu_vector_file_qgNPwz": {
+      "type": "cu-vector-file",
+      "blocks": {
+        "format_UFpQfj": {
+          "type": "format",
+          "settings": {
+            "icon": "shopify://shop_images/icons8-image-file_68448e35-36d2-4319-8fda-8be175a44396.svg",
+            "title_1": "Popular File Types:",
+            "title_2": "<p>.AI, .EPS, .PDF, .SVG</p>"
+          }
+        },
+        "format_YyVPTN": {
+          "type": "format",
+          "settings": {
+            "icon": "shopify://shop_images/search-plus-svgrepo-com_12e2bda8-3232-42da-a708-aaabc6bfa8a5.svg",
+            "title_1": "Common Examples:",
+            "title_2": "<p>Logos, text, digital artwork</p>"
+          }
+        }
+      },
+      "block_order": [
+        "format_UFpQfj",
+        "format_YyVPTN"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/ArtGuidelines_RasterImage_Cropped-1-min_jpg.webp",
+        "heading": "Raster Files",
+        "text": "<p>Raster files are also accepted. We can take your layered .psd, .pdf, or .tif file types and prepare them for screen print. While raster images don’t have the flawless resolution of a vector image, we can blend colors to achieve photorealism and a wide range of effects.</p>",
+        "tip": "Tips:",
+        "points": "<ul><li>Supplied files should be to-size at a min. of 300 DPI.</li><li>If possible, separate spot colors onto separate layers or channels.</li><li>Be aware the fine details don’t always make it to the final print due to the weave of the apparel.</li></ul>",
+        "line": false
+      }
+    },
+    "cu_text_with_button_JfCjjE": {
+      "type": "cu-text-with-button",
+      "settings": {
+        "text": "PLACE AN ORDER",
+        "heading": "Ready to work with us?",
+        "btn": "GET HELP",
+        "link": "#"
+      }
+    },
+    "cu_content_with_tabs_8WV9kz": {
+      "type": "cu-content-with-tabs",
+      "blocks": {
+        "format_EMVMY9": {
+          "type": "format",
+          "settings": {
+            "tab": "Screen Print",
+            "image": "shopify://shop_images/screenshot2022-03-08at4_JsOx_565x740_crop_center-1-min.jpg_1.webp",
+            "heading": "Screen Print",
+            "text": "<p>The stencil of your graphic is printed onto a screen, and ink is then pushed through the mesh to transfer your graphic onto your garment. Each color requires a separate screen, but it produces high quality prints that will hold up for a long time.</p>",
+            "icon_1": "shopify://shop_images/icons8-image-file_68448e35-36d2-4319-8fda-8be175a44396.svg",
+            "title_1": "Preferred File Type:",
+            "text_1": "<ul><li>Solid, spot colors prefer vector files</li><li>Photorealistic images or blending colors prefer hi-res raster files</li></ul>",
+            "icon_2": "shopify://shop_images/search-plus-svgrepo-com_12e2bda8-3232-42da-a708-aaabc6bfa8a5.svg",
+            "title_2": "Tips:",
+            "text_2": "<ul><li>Do not live trace your image</li><li>Providing the layered files will allow us to produce the best possible product</li></ul>"
+          }
+        },
+        "format_dDp9Ab": {
+          "type": "format",
+          "settings": {
+            "tab": "Transfers",
+            "image": "shopify://shop_images/hat-transfer-4-1-1-min_jpg.webp",
+            "heading": "Transfers",
+            "text": "<p>Render incredible detail with crisp, clean edges in over a million vivid colors and gradients for decorating hats, outerwear, and other fabrics you cannot directly print on.</p>",
+            "icon_1": "shopify://shop_images/icons8-image-file_68448e35-36d2-4319-8fda-8be175a44396.svg",
+            "title_1": "Preferred File Type:",
+            "text_1": "<ul><li>Solid, spot colors prefer vector files</li><li>Photorealistic images or blending colors prefer hi-res raster files</li></ul>",
+            "icon_2": "shopify://shop_images/search-plus-svgrepo-com_12e2bda8-3232-42da-a708-aaabc6bfa8a5.svg",
+            "title_2": "Tips:",
+            "text_2": "<ul><li>Do not live trace your image</li><li>Providing the layered files will allow us to produce the best possible product</li></ul>"
+          }
+        },
+        "format_iyHtNy": {
+          "type": "format",
+          "settings": {
+            "tab": "Screen Print",
+            "image": "shopify://shop_images/screenshot2022-03-08at4_JsOx_565x740_crop_center-1-min.jpg_1.webp",
+            "heading": "Screen Print",
+            "text": "<p>The stencil of your graphic is printed onto a screen, and ink is then pushed through the mesh to transfer your graphic onto your garment. Each color requires a separate screen, but it produces high quality prints that will hold up for a long time.</p>",
+            "icon_1": "shopify://shop_images/icons8-image-file_68448e35-36d2-4319-8fda-8be175a44396.svg",
+            "title_1": "Preferred File Type:",
+            "text_1": "<ul><li>Solid, spot colors prefer vector files</li><li>Photorealistic images or blending colors prefer hi-res raster files</li></ul>",
+            "icon_2": "shopify://shop_images/search-plus-svgrepo-com_12e2bda8-3232-42da-a708-aaabc6bfa8a5.svg",
+            "title_2": "Tips:",
+            "text_2": "<ul><li>Do not live trace your image</li><li>Providing the layered files will allow us to produce the best possible product</li></ul>"
+          }
+        },
+        "format_btR9xV": {
+          "type": "format",
+          "settings": {
+            "tab": "Screen Print",
+            "image": "shopify://shop_images/screenshot2022-03-08at4_JsOx_565x740_crop_center-1-min.jpg_1.webp",
+            "heading": "Screen Print",
+            "text": "<p>The stencil of your graphic is printed onto a screen, and ink is then pushed through the mesh to transfer your graphic onto your garment. Each color requires a separate screen, but it produces high quality prints that will hold up for a long time.</p>",
+            "icon_1": "shopify://shop_images/icons8-image-file_68448e35-36d2-4319-8fda-8be175a44396.svg",
+            "title_1": "Preferred File Type:",
+            "text_1": "<ul><li>Solid, spot colors prefer vector files</li><li>Photorealistic images or blending colors prefer hi-res raster files</li></ul>",
+            "icon_2": "shopify://shop_images/search-plus-svgrepo-com_12e2bda8-3232-42da-a708-aaabc6bfa8a5.svg",
+            "title_2": "Tips:",
+            "text_2": "<ul><li>Do not live trace your image</li><li>Providing the layered files will allow us to produce the best possible product</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "format_EMVMY9",
+        "format_dDp9Ab",
+        "format_iyHtNy",
+        "format_btR9xV"
+      ],
+      "settings": {
+        "text": "ART FILES",
+        "heading": "Preferred File Types"
+      }
+    },
+    "cu_faqs_box_M3cw8K": {
+      "type": "cu-faqs-box",
+      "blocks": {
+        "faqs_TyTAWT": {
+          "type": "faqs",
+          "settings": {
+            "title": "WHAT KIND OF ARTWORK IS REQUIRED FOR SCREEN PRINTING?",
+            "answer": "<p>For the best quality result, we’d recommend using vector files (.ai, .pdf, .eps, or .svg). We can also use raster images (.psd, .pdf, .tif) at 300 DPI. If you’re not sure your artwork meets these standards, just shoot us an email and we’ll let you know!</p>"
+          }
+        },
+        "faqs_A3FrVg": {
+          "type": "faqs",
+          "settings": {
+            "title": "WHAT KIND OF ARTWORK IS REQUIRED FOR SCREEN PRINTING?",
+            "answer": "<p>For the best quality result, we’d recommend using vector files (.ai, .pdf, .eps, or .svg). We can also use raster images (.psd, .pdf, .tif) at 300 DPI. If you’re not sure your artwork meets these standards, just shoot us an email and we’ll let you know!</p>"
+          }
+        },
+        "faqs_8JAdWH": {
+          "type": "faqs",
+          "settings": {
+            "title": "WHAT KIND OF ARTWORK IS REQUIRED FOR SCREEN PRINTING?",
+            "answer": "<p>For the best quality result, we’d recommend using vector files (.ai, .pdf, .eps, or .svg). We can also use raster images (.psd, .pdf, .tif) at 300 DPI. If you’re not sure your artwork meets these standards, just shoot us an email and we’ll let you know!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faqs_TyTAWT",
+        "faqs_A3FrVg",
+        "faqs_8JAdWH"
+      ],
+      "settings": {
+        "text": "FAQ",
+        "heading": "Frequently Asked Questions"
+      }
+    },
+    "cu_blog_box_iRQteE": {
+      "type": "cu-blog-box",
+      "blocks": {
+        "blog_t3aUrw": {
+          "type": "blog",
+          "settings": {
+            "image": "shopify://shop_images/blog-header_png.webp",
+            "date": "27 February 2025",
+            "text": "<p><a href=\"#\" title=\"#\">Introducing the Subtle Soft Wash Collection: Effortless Comfort, Vintage & Solid Colors</a></p>",
+            "link": ""
+          }
+        },
+        "blog_Kfq7hY": {
+          "type": "blog",
+          "settings": {
+            "image": "shopify://shop_images/blog-header_png.webp",
+            "date": "10 February 2025",
+            "text": "<p><a href=\"#\" title=\"#\">Introducing the Private Label Crop CollecXion: Fresh Cuts for Spring</a></p>",
+            "link": ""
+          }
+        },
+        "blog_UPVkTg": {
+          "type": "blog",
+          "settings": {
+            "image": "shopify://shop_images/blog-header_png.webp",
+            "date": "4 February 2025",
+            "text": "<p><a href=\"#\" title=\"#\">Building Your Brand with Private Label</a></p>",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "blog_t3aUrw",
+        "blog_Kfq7hY",
+        "blog_UPVkTg"
+      ],
+      "settings": {
+        "text": "ON THE BLOG",
+        "heading": "More Education & Inspiration"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cu_banner_box_yBX4AG",
+    "cu_vector_file_KYV3q4",
+    "cu_vector_file_qgNPwz",
+    "cu_text_with_button_JfCjjE",
+    "cu_content_with_tabs_8WV9kz",
+    "cu_faqs_box_M3cw8K",
+    "cu_blog_box_iRQteE"
+  ]
+}

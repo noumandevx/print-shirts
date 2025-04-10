@@ -1,0 +1,56 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
+    "sections": {
+      "main": {
+        "type": "main-page",
+        "disabled": true,
+        "settings": {
+          "padding_top": 28,
+          "padding_bottom": 28
+        }
+      },
+      "rich_text_rcydBQ": {
+        "type": "rich-text",
+        "blocks": {
+          "heading_y8qBbB": {
+            "type": "heading",
+            "settings": {
+              "heading": "Terms & Conditions",
+              "heading_size": "h1"
+            }
+          },
+          "text_cAVcyJ": {
+            "type": "text",
+            "settings": {
+              "text": "<p>Welcome to Ghost Print Lab! By using our website and services, you agree to comply with and be bound by the following terms and conditions. Please read them carefully before making a purchase.</p><h2>1. General</h2><ul><li>By accessing our website, you confirm that you are at least 18 years old or have parental/guardian consent to use our services.</li><li>These terms apply to all users of the site, including customers, browsers, and contributors.</li><li>We reserve the right to update or modify these terms at any time without prior notice.</li></ul><h2>2. Products and Services</h2><ul><li>Ghost Print Lab specializes in custom t-shirts and bulk orders. All products are made to order based on your specifications.</li><li>While we strive for accuracy, colors and designs may appear slightly different due to screen settings and printing limitations.</li><li>We reserve the right to refuse any order for any reason, including but not limited to errors in pricing or availability.</li></ul><h2>3. Customization and Intellectual Property</h2><ul><li>By submitting a design for printing, you affirm that you own or have the right to use all intellectual property in the design.</li><li>Ghost Print Lab is not responsible for any copyright infringement or legal disputes arising from customer-submitted designs.</li></ul><h2>4. Pricing and Payments</h2><ul><li>Prices for our products are listed on the website and are subject to change without notice.</li><li>Payment must be completed at the time of order placement. Accepted payment methods are displayed during checkout.</li><li>All prices are inclusive of applicable taxes unless stated otherwise.</li></ul><h2>5. Shipping and Delivery</h2><ul><li>We offer standard and expedited shipping options. Delivery times may vary depending on your location.</li><li>Ghost Print Lab is not responsible for delays caused by shipping carriers or unforeseen circumstances.</li><li>Please ensure your shipping address is accurate. We are not liable for orders shipped to incorrect addresses provided by the customer.</li></ul><h2>6. Returns and Refunds</h2><ul><li>Our refund and exchange policy can be found <a>here</a>. Please review it for detailed information.</li></ul><h2>7. Limitation of Liability</h2><ul><li>Ghost Print Lab is not liable for any direct, indirect, incidental, or consequential damages resulting from the use of our website or services.</li><li>We are not responsible for any issues arising from incorrect customer-provided designs or specifications.</li></ul><h2>8. Governing Law</h2><ul><li>These terms and conditions are governed by and construed in accordance with the laws of [Your Jurisdiction]. Any disputes will be resolved exclusively in the courts of this jurisdiction.</li></ul><h2>9. Contact Information</h2><ul><li>For any questions or concerns about these terms, please contact us at <a>support@ghostprintlab.com</a>.</li></ul>"
+            }
+          }
+        },
+        "block_order": [
+          "heading_y8qBbB",
+          "text_cAVcyJ"
+        ],
+        "settings": {
+          "desktop_content_position": "left",
+          "content_alignment": "left",
+          "color_scheme": "",
+          "full_width": true,
+          "padding_top": 40,
+          "padding_bottom": 52
+        }
+      }
+    },
+    "order": [
+      "main",
+      "rich_text_rcydBQ"
+    ]
+  }
+  

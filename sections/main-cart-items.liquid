@@ -1,0 +1,145 @@
+{{ 'component-cart.css' | asset_url | stylesheet_tag }}
+{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}
+{{ 'component-totals.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'component-discounts.css' | asset_url | stylesheet_tag }}
+{{ 'quantity-popover.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- unless settings.cart_type == 'drawer' -%}
+  <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
+{%- endunless -%}
+
+<script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
+
+<cart-items class="cart-item-main gradient color-{{ section.settings.color_scheme }} isolate{% if cart == empty %} is-empty{% else %} section-{{ section.id }}-padding{% endif %}">
+  <div class="page-width">
+    <div class="title-wrapper-with-link">
+      <h1 class="title title--primary">Cart <span>summary</span></h1>
+      {% comment %} <a href="{{ routes.all_products_collection_url }}" class="underlined-link">
+        {{- 'general.continue_shopping' | t -}}
+      </a> {% endcomment %}
+    </div>
+
+    <div class="cart__warnings">
+      <h1 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h1>
+      <a href="{{ routes.all_products_collection_url }}" class="button">
+        {{ 'general.continue_shopping' | t }}
+      </a>
+
+      {%- if shop.customer_accounts_enabled and customer == null -%}
+        <h2 class="cart__login-title">{{ 'sections.cart.login.title' | t }}</h2>
+        <p class="cart__login-paragraph">
+          {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
+        </p>
+      {%- endif -%}
+    </div>
+
+    <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart">
+      <div class="cart__items" id="main-cart-items" data-id="{{ section.id }}">
+        <div class="js-contents">
+          {%- if cart != empty -%}
+            <table class="cart-items">
+              <caption class="visually-hidden">
+                {{ 'sections.cart.title' | t }}
+              </caption>
+              <thead>
+                <tr>
+                  <th class="caption-with-letter-spacing small-hide" colspan="2" scope="col">
+                    {{ 'sections.cart.headings.product' | t }}
+                  </th>
+                  <th class="caption-with-letter-spacing medium-hide large-up-hide" colspan="1" scope="col">
+                    {{ 'sections.cart.headings.product' | t }}
+                  </th>
+                  <th class="medium-hide large-up-hide right caption-with-letter-spacing" colspan="1" scope="col">
+                    {{ 'sections.cart.headings.total' | t }}
+                  </th>
+                  <th class="caption-with-letter-spacing cart-item-th-color" colspan="1" scope="col">
+                    Color
+                  </th>
+                  <th class="caption-with-letter-spacing cart-item-th-size" colspan="1" scope="col">
+                    Size
+                  </th>
+                  <th class="cart-items__heading--wide cart-items__heading--quantity caption-with-letter-spacing" colspan="1" scope="col">
+                    QTY
+                  </th>
+                  <th class="caption-with-letter-spacing cart-item-th-print" colspan="1" scope="col">
+                    print
+                  </th>
+                  <th class=" right caption-with-letter-spacing cart-item-th-total" colspan="1" scope="col">
+                    {{ 'sections.cart.headings.total' | t }}
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {% render 'cartpage-item' %}
+              </tbody>
+            </table>
+          {%- endif -%}
+        </div>
+      </div>
+      <p class="visually-hidden" id="cart-live-region-text" aria-live="polite" role="status"></p>
+      <p
+        class="visually-hidden"
+        id="shopping-cart-line-item-status"
+        aria-live="polite"
+        aria-hidden="true"
+        role="status"
+      >
+        {{ 'accessibility.loading' | t }}
+      </p>
+    </form>
+  </div>
+</cart-items>
+
+{% schema %}
+{
+  "name": "t:sections.main-cart-items.name",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ]
+}
+{% endschema %}

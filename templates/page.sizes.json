@@ -1,0 +1,74 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "main_page_size_VefpX7": {
+      "type": "main-page-size",
+      "blocks": {
+        "slide_ywyN9V": {
+          "type": "slide",
+          "settings": {
+            "image_link": "shopify://pages/size-1",
+            "image": "shopify://shop_images/9691-White-5-2007WWhiteFlatFront-1200W.jpg",
+            "heading-block": "T-Shirt (Full Sleeve)",
+            "text-block": "<p>Time to find your perfect fit.</p>",
+            "button_link": "shopify://pages/size-1",
+            "button-text": "Discover Now"
+          }
+        },
+        "slide_AnyefE": {
+          "type": "slide",
+          "settings": {
+            "image_link": "shopify://pages/size-2",
+            "image": "shopify://shop_images/t-shirt-size-chart-template-with-instructions.jpg",
+            "heading-block": "T-Shirt (Half Sleeve)",
+            "text-block": "<p>Let the layering commence.</p>",
+            "button_link": "shopify://pages/size-2",
+            "button-text": "Discover Now"
+          }
+        },
+        "slide_nVAbKc": {
+          "type": "slide",
+          "settings": {
+            "image_link": "shopify://pages/size-3",
+            "image": "shopify://shop_images/hoodie.jpg",
+            "heading-block": "Hoddie Guide",
+            "text-block": "<p>From mini to maximum impact styles.</p>",
+            "button_link": "shopify://pages/size-3",
+            "button-text": "Discover Now"
+          }
+        }
+      },
+      "block_order": [
+        "slide_ywyN9V",
+        "slide_AnyefE",
+        "slide_nVAbKc"
+      ],
+      "settings": {
+        "heading": "Size Guides",
+        "text": "<p>Looking for the ultimate jewellery size guides? You've come to the right place.</p>",
+        "end-text": "Still Can't Find Your Fit?",
+        "description": "<p>Visit us <a href=\"https://www.missoma.com/pages/our-stores\" target=\"_blank\" title=\"Our Stores\">in-store</a> or <a href=\"https://www.missoma.com/pages/contact-us\" target=\"_blank\" title=\"Contact us\">contact</a> our Customer Care Team.</p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main_page_size_VefpX7"
+  ]
+}

@@ -1,0 +1,333 @@
+{{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.mobile_padding_top  }}px;
+    padding-bottom: {{ section.settings.mobile_padding_bottom  }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="contact custom-contact page-width page-width--narrow section-{{ section.id }}-padding">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="title custom-contact__title title-wrapper--no-top-margin inline-richtext{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        {{ section.settings.heading }}
+      </h2>
+    {%- else -%}
+      <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
+    {%- endif -%}
+    {%- liquid
+      assign contact_form_class = 'isolate'
+      if settings.animations_reveal_on_scroll
+        assign contact_form_class = 'isolate scroll-trigger animate--slide-in'
+      endif
+    -%}
+    {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
+      {%- if form.posted_successfully? -%}
+        <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
+          {% render 'icon-success' %}
+          {{ 'templates.contact.form.post_success' | t }}
+        </h2>
+      {%- elsif form.errors -%}
+        <div class="form__message">
+          <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
+            {% render 'icon-error' %}
+            {{ 'templates.contact.form.error_heading' | t }}
+          </h2>
+        </div>
+        <ul class="form-status-list caption-large" role="list">
+          <li>
+            <a href="#ContactForm-email" class="link">
+              {{ form.errors.translated_fields.email | capitalize }}
+              {{ form.errors.messages.email }}
+            </a>
+          </li>
+        </ul>
+      {%- endif -%}
+      <div class="contact__fields">
+        <div class="field">
+          <input
+            class="field__input"
+            autocomplete="name"
+            type="text"
+            id="ContactForm-name"
+            name="contact[{{ 'templates.contact.form.name' | t }}]"
+            value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+            placeholder="{{ 'templates.contact.form.name' | t }}"
+          >
+          <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
+        </div>
+        <div class="field field--with-error">
+          <input
+            autocomplete="email"
+            type="email"
+            id="ContactForm-email"
+            class="field__input"
+            name="contact[email]"
+            spellcheck="false"
+            autocapitalize="off"
+            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+            aria-required="true"
+            {% if form.errors contains 'email' %}
+              aria-invalid="true"
+              aria-describedby="ContactForm-email-error"
+            {% endif %}
+            placeholder="{{ 'templates.contact.form.email' | t }}"
+          >
+          <label class="field__label" for="ContactForm-email">
+            {{- 'templates.contact.form.email' | t }}
+            <span aria-hidden="true">*</span></label
+          >
+          {%- if form.errors contains 'email' -%}
+            <small class="contact__field-error" id="ContactForm-email-error">
+              <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+              <span class="form__message">
+                {%- render 'icon-error' -%}
+                {{- form.errors.translated_fields.email | capitalize }}
+                {{ form.errors.messages.email -}}
+              </span>
+            </small>
+          {%- endif -%}
+        </div>
+      </div>
+      <div class="contact__fields custom-contact__select">
+        <div class="field">
+          <div class="select">
+          <select id="existing-customer" name="contact[existing_customer]" class="drop-down-message select__select" required>
+            <option value="" disabled selected>*New or Existing Customer</option>
+            <option value="New">New</option>
+            <option value="Existing">Existing </option>
+          </select>
+          {% render 'icon-caret' %}
+          </div>
+        </div>
+        <div class="field">
+          <input
+            class="field__input"
+            autocomplete="deadline"
+            type="text"
+            id="ContactForm-deadline"
+            name="contact[Deadline]"
+            value=""
+            placeholder="Deadline (if applicable)"
+          >
+          <label class="field__label" for="ContactForm-name">Deadline (if applicable)</label>
+        </div>
+      </div>
+      <div class="contact__fields custom-contact__select">
+        <div class="field">
+          <div class="select">
+          <select id="model-garments" name="contact[model_garments]" class="drop-down-message select__select" required>
+            <option value="" disabled selected>* Want a specific brand or model of garment?</option>
+            <option value="Already decided">Already decided</option>
+            <option value="I need help choosing">I need help choosing </option>
+          </select>
+          {% render 'icon-caret' %}
+          </div>
+        </div>
+      </div>
+      <div class="contact__fields custom-contact__select">
+        <div class="field">
+          <input
+          class="field__input"
+          autocomplete="brand_model"
+          type="text"
+          id="ContactForm-brand_model"
+          name="contact[brand_model]"
+          value=""
+          placeholder="*Specific Brand / Model"
+        >
+        <label class="field__label" for="ContactForm-name">*Specific Brand / Model</label>
+        </div>
+        <div class="field">
+          <input
+            class="field__input"
+            autocomplete="garment_colour"
+            type="text"
+            id="ContactForm-garment_colour"
+            name="contact[garment_colour]"
+            value=""
+            placeholder="*Garment Colour"
+          >
+          <label class="field__label" for="ContactForm-name">*Garment Colour</label>
+        </div>
+      </div>
+      <div class="contact__fields custom-contact__select">
+        <div class="field">
+          <input
+          class="field__input"
+          autocomplete="total_quantity"
+          type="number"
+          id="ContactForm-total_quantity"
+          name="contact[total_quantity]"
+          value=""
+          placeholder="*Total Quanitity"
+        >
+        <label class="field__label" for="ContactForm-name">*Total Quanitity</label>
+        </div>
+      </div>
+      <div class="contact__fields custom-contact__select">
+        <div class="field">
+          <div class="select">
+          <select id="services" name="contact[services]" class="drop-down-message select__select" required>
+            <option value="" disabled selected>*Services Needed</option>
+            <option value="Screen Printing">Screen Printing</option>
+            <option value="DTG / DTF (Digital Print)">DTG / DTF (Digital Print) </option>
+            <option value="Embroidery">Embroidery</option>
+            <option value="Not Sure">Not Sure</option>
+          </select>
+          {% render 'icon-caret' %}
+          </div>
+        </div>
+      </div>
+      <div class="contact__fields custom-contact__select">
+        <div class="field">
+          <input
+          class="field__input"
+          autocomplete="print_location"
+          type="text"
+          id="ContactForm-print_location"
+          name="contact[print_location]"
+          value=""
+          placeholder="*Print Location/s or Replacement/s"
+        >
+        <label class="field__label" for="ContactForm-name">*Print Location/s or Replacement/s</label>
+        </div>
+        <div class="field">
+          <input
+            class="field__input"
+            autocomplete="print_size"
+            type="text"
+            id="ContactForm-print_size"
+            name="contact[print_size]"
+            value=""
+            placeholder="Print Size"
+          >
+          <label class="field__label" for="ContactForm-name">Print Size</label>
+        </div>
+      </div>
+      <div class="field contact__fields custom_contact__fields custom_textarea">
+        <div class="field">
+        <textarea
+          rows="10"
+          id="ContactForm-body"
+          class="text-area field__input"
+          name="contact[{{ 'templates.contact.form.comment' | t }}]"
+          placeholder="Anything Else?"
+        >
+          {{- form.body -}}
+        </textarea>
+        <label class="form__label field__label" for="ContactForm-body">
+          Anything Else?
+        </label>
+        </div>
+      </div>
+      <div class="field contact__fields custom_contact__fields file_custom_contact__fields">
+        <label class="form__label field__label">
+          We can receive the artwork later.
+        </label>
+        <!-- <div class="field">
+          <div id="yourBtn" onclick="getFile()">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <rect width="16" height="16" fill="url(#pattern0_22_334)"/>
+              <defs>
+              <pattern id="pattern0_22_334" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image0_22_334" transform="scale(0.00195312)"/>
+              </pattern>
+              <image id="image0_22_334" width="512" height="512" xlink:href="data:image/png;base64,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"/>
+              </defs>
+            </svg>
+              Upload Artwork
+            </div>
+          <div style='height: 0px;width:0px; overflow:hidden;'><input id="upfile" type="file" value="upload"/></div>
+        </div> -->
+      </div>
+      <div class="contact__button">
+        <button type="submit" class="button">
+          {{ 'templates.contact.form.send' | t }}
+        </button>
+      </div>
+    {%- endform -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom form",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "t:sections.contact-form.settings.title.default",
+      "label": "t:sections.contact-form.settings.title.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "(Mobile) padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "(Mobile) padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom form"
+    }
+  ]
+}
+{% endschema %}

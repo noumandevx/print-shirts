@@ -1,0 +1,163 @@
+<div class="cu-text-with-button-row">
+  <div class="page-width">
+    <div class="cu-text-with-button-iner-row">
+      <div class="cu-text-with-button-content">
+        <div class="cu-btn-sub-title">
+          {{ section.settings.text }}
+        </div>
+        <h2 class="cu-btn-heading">{{ section.settings.heading }}</h2>
+      </div>
+      {% if section.settings.btn != '' %}
+        <div class="cu-text-with-button-btn">
+          <a href="{{ section.settings.link }}" class="cu-text-with-button--body">{{ section.settings.btn }}</a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Cu text with button",
+  "settings": [
+     {
+        "type": "text",
+        "id": "text",
+        "label": "Title",
+        "default":"PLACE AN ORDER"
+     },
+     {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Ready to work with us?"
+      },
+      {
+        "type": "text",
+        "id": "btn",
+        "label": "Button",
+        "default":"GET HELP"
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Button link"
+      }
+  ],
+  "presets" : [
+    {
+      "name" : "Cu text with button"
+    }
+  ]
+}
+{% endschema %}
+<style>
+  .cu-vector-file-iner-row {
+      padding: 60px 0;
+  }
+  .cu-text-with-button-row {
+      padding: 100px 0;
+      background-color: #2ff1ed;
+      overflow: hidden;
+      position: relative;
+  }
+
+  .cu-text-with-button-row:before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: #2B374D;
+      transform: rotate(1.8deg);
+      top: 0;
+      left: 0;
+  }
+
+  .cu-text-with-button-iner-row {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .cu-text-with-button-btn {
+      flex: 0 0 auto;
+      width: 25%;
+      display: flex;
+      justify-content: center;
+  }
+
+  a.cu-text-with-button--body {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 110.02%;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: #FFF;
+      display: inline-block;
+      padding: 14px 20px;
+      background-color: #2ff1ed;
+      border: 2px solid #2ff1ed;
+      transition: all 0.3s;
+      border-radius: 2px;
+      box-shadow: 0 6px 10px rgb(0 0 0 / 30%);
+  }
+
+  a.cu-text-with-button--body:hover {
+      background-color: transparent;
+      border: 2px solid #2ff1ed;
+      color: #2ff1ed;
+  }
+
+  .cu-btn-sub-title {
+      font-size: 24px;
+      color: #2ff1ed;
+  }
+
+  h2.cu-btn-heading {
+      font-size: 44px;
+      color: white;
+  }
+  @media (min-width: 768px) {
+     .cu-text-with-button-content {
+          flex: 0 0 auto;
+          width: 75%;
+     }
+  }
+  @media (max-width: 800px) {
+
+  }
+  @media (max-width:650px){
+    .cu-vector-file-row {
+        padding: 30px 0;
+    }
+    .cu-text-with-button-iner-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cu-btn-sub-title {
+        font-size: 16px;
+    }
+
+    h2.cu-btn-heading {
+        font-size: 28px;
+    }
+
+    .cu-text-with-button-btn {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    a.cu-text-with-button--body {
+        width: 100%;
+        max-width: 60%;
+    }
+
+    .cu-text-with-button-row {
+        padding: 50px 0;
+    }
+  }
+</style>

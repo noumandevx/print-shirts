@@ -1,0 +1,83 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "multi_data_7daHCC": {
+      "type": "multi-data",
+      "settings": {
+        "top-text": "hey, ghost print lab",
+        "first-text": "NEED",
+        "second-text": "CUSTOM",
+        "third-text": "APPAREL",
+        "end-text": "delivered as soon as possible!",
+        "second-col-text": "Give Me A Quote!",
+        "button_link": "https://ghostprintlab.com/collections/quickorder",
+        "third-col-text-1": "VISIT SAMPLE STORE",
+        "button_link-2": "",
+        "third-col-text-2": "WANT SOMETHING CUSTOM",
+        "button_link-3": "https://ghostprintlab.com/pages/contact"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "link_list_9QNXeQ": {
+          "type": "link_list",
+          "settings": {
+            "heading": "CATEGORIES",
+            "menu": "categories"
+          }
+        },
+        "link_list_hfNjUg": {
+          "type": "link_list",
+          "settings": {
+            "heading": "SUPPORT",
+            "menu": "support"
+          }
+        },
+        "link_list_Ebay97": {
+          "type": "link_list",
+          "settings": {
+            "heading": "THE BRAND",
+            "menu": "the-brand"
+          }
+        }
+      },
+      "block_order": [
+        "link_list_9QNXeQ",
+        "link_list_hfNjUg",
+        "link_list_Ebay97"
+      ],
+      "settings": {
+        "color_scheme": "scheme-4",
+        "newsletter_enable": true,
+        "newsletter_heading": "Subscribe to our emails",
+        "newsletter_text": "Be the first to receive news, discounts, sales and more.",
+        "newsletter_text_bottom": "",
+        "newsletter_links": "",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "payment_enable": true,
+        "show_policy": true,
+        "margin_top": 0,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "multi_data_7daHCC",
+    "footer"
+  ]
+}

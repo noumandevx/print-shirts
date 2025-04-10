@@ -1,0 +1,154 @@
+<div class="custom-table-box-{{ section.id }}">
+    <div class="page-width">
+      {% if section.settings.heading != '' %}
+        <h2 class="custom-table-heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+      <div class="size-table-main">
+        <div class="custom-table-bo-inner-row">
+          {{ section.settings.page.content }}
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  {% schema %}
+  {
+    "name": "Custom table box",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "page",
+        "id": "page",
+        "label": "Page"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background color",
+        "default": "#E1F4F3"
+      },
+      {
+        "type": "range",
+        "id": "padding-top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding top desktop",
+        "default": 10
+      },
+      {
+        "type": "range",
+        "id": "padding-bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding bottom desktop",
+        "default": 10
+      },
+      {
+        "type": "range",
+        "id": "padding-top-mobile",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding top mobile",
+        "default": 10
+      },
+      {
+        "type": "range",
+        "id": "padding-bottom-mobile",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding bottom mobile",
+        "default": 10
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom table box",
+      }
+    ]
+  }
+  {% endschema %}
+  <style>
+    .custom-table-box-{{ section.id }} {
+        width: 100%;
+        background: {{ section.settings.bg_color }};
+        padding-top: {{ section.settings.padding-top }}px;
+        padding-bottom: {{ section.settings.padding-bottom }}px;
+    }
+    .custom-table-bo-inner-row table.MsoNormalTable {
+        width: 80%;
+        max-width: 100%;
+        margin: 0 auto;
+        border-collapse: collapse;
+        border: 1px solid #e0e0e0;
+    }
+    
+    .custom-table-bo-inner-row table.MsoNormalTable tr {
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        width: 100%;
+        border: 1px solid #e0e0e0;
+    }
+    
+    .custom-table-bo-inner-row table.MsoNormalTable tr td {
+        padding: 11px 5px!important;
+        line-height: 1.4;
+        width: calc(100% / 5);
+    }
+    .custom-table-heading {
+        padding: 0 20px;
+        margin: 0 0 36px;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 110%;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: .01em;
+    }
+    @media (min-width:769px){
+      .custom-table-bo-column-info {
+          padding-left: 30px;
+      }
+    }
+    @media (max-width:768px){
+      .custom-table-box-{{ section.id }} {
+         padding-top: {{ section.settings.padding-top-mobile }}px;
+         padding-bottom: {{ section.settings.padding-bottom-mobile }}px;
+        overflow: scroll;
+      }
+      .size-table-main {
+        width: 500px;
+        overflow: scroll;
+      }
+    }
+    @media (max-width:600px){
+      .custom-table-heading {
+        margin: 0 0 16px;
+        font-size: 22px;
+        line-height: 1;
+      }
+    }
+    @media (max-width: 400px) {
+        .custom-table-bo-inner-row table.MsoNormalTable tr td p span {
+          font-size: 13px !important;
+        }
+    }
+    @media (max-width:350px){
+        .custom-table-bo-inner-row table.MsoNormalTable tr td p span {
+          font-size: 11px !important;
+        }
+    }
+  </style>
+  

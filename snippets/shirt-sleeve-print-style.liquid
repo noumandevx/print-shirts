@@ -1,0 +1,134 @@
+<div class="print-method__container hidden" data-match-name="sleeve">
+  <div class="container">
+    <div class="print-method__header">
+      <div class="print-method__image">
+        <img src="" class="print-method__image-media">
+      </div>
+      <div class="print-method__header-content">
+        <div class="print-method__title">
+          <h2>Sleeve Print Method</h2>
+        </div>
+        <div class="print-method__text">Choose the Print Method for Sleeve.</div>
+      </div>
+    </div>
+    <div class="print-method__items">
+      {% assign sleeve_print_metafields = product.metafields.custom[block.settings.sleeve_print_methods].value %}
+      {% assign sleeve_print_type = product.metafields.custom.print_type.value %}
+      {% for shop_print_method in shop.metaobjects.print_method.values %}
+        {% assign supported_product = false %}
+        {% for print_method in sleeve_print_metafields %}
+          {% assign sleeve_print_title = print_method.method_title %}
+          {% if shop_print_method.method_title contains sleeve_print_title %}
+            {% assign supported_product = true %}
+          {% endif %}
+        {% endfor %}
+
+        <div
+          class="print-method__item{% if supported_product == false %} print-method__item--notsupported{% else %} print-method__item--supported{% endif %}"
+          print-method-data-name="{{ shop_print_method.method_title | handleize }}"
+        >
+          {% assign check_method_title = shop_print_method.method_title | handleize %}
+          {% assign link_print_method = '' %}
+          {% if check_method_title == 'discharge' %}
+            {% assign link_print_method = '/pages/discharge-info' %}
+          {% elsif check_method_title == 'dtf' %}
+            {% assign link_print_method = '/pages/dtf-info' %}
+          {% elsif check_method_title == 'dtg' %}
+            {% assign link_print_method = '/pages/dtg-info' %}
+          {% elsif check_method_title == 'embroidery' %}
+            {% assign link_print_method = '/pages/embroidery-info' %}
+          {% elsif check_method_title == 'plastisol' %}
+            {% assign link_print_method = '/pages/plastisol-info' %}
+          {% elsif check_method_title == 'water-based' %}
+            {% assign link_print_method = '/pages/water-based-info' %}
+          {% endif %}
+          <div class="print-method__item-wrapper">
+            <a
+              href="{{ link_print_method }}"
+              class="print-method__item-tooltip"
+            >
+              {% render 'tooltip-icon' %}
+            </a>
+            <div class="print-method__item-data">
+              <div class="print-method__item-title">
+                <h2>{{ shop_print_method.method_title }}</h2>
+              </div>
+              <div class="print-method__item-image">
+                <img src="{{ shop_print_method.method_image | img_url:'300x300' }}" loading="lazy" alt="">
+              </div>
+              <div class="print-method__item-text">
+                {{ shop_print_method.method_description }}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="print-size_container" data-size-match-name="sleeve">
+    <div class="container">
+      {% for print_type in sleeve_print_type %}
+        {% assign print_type_showon = '' %}
+        {% for show_on in print_type.show_on %}
+          {% assign print_type_showon = show_on | downcase %}
+        {% endfor %}
+        {% assign print_type_showon = print_type_showon | handleize %}
+        {% if print_type_showon contains 'sleeve' %}
+          {% assign method_title = print_type.print_method.value.method_title | handleize %}
+          <div
+            class="print-size-grid hidden"
+            data-print-type="{{ method_title }}"
+            data-print-type-showon="{{ print_type.show_on.value | handleize }}"
+          >
+            {% if print_type.sizes_style.value == 'Circle' %}
+              <h1>Choose Number of Colour/s</h1>
+            {% else %}
+              <h1>Choose Print Size</h1>
+            {% endif %}
+            <div class="items-wrapper">
+              <h2 class="items_name">Sleeve</h2>
+              <div class="items-container {{print_type.sizes_style.value | downcase }}">
+                {% for variant in print_type.sizes.value %}
+                  <div class="print-variant__item">
+                    <div class="radio">
+                      <input
+                        type="radio"
+                        id="{{ print_type_showon}}-{{method_title}}-{{ forloop.index }}"
+                        value="{{ variant.title }}{% if print_type.sizes_style.value == 'Circle' %} colors{% endif %}"
+                        class="print-style__checkbox"
+                        data-input-print-location="{{ print_type.show_on.value }}"
+                        data-print-variant-id="{{ variant.id }}"
+                        data-print-variant-price="{{ variant.price }}"
+                        name="sleeve-variant"
+                      >
+                      <label
+                        for="{{ print_type_showon}}-{{method_title}}-{{ forloop.index }}"
+                        class="print-style_label"
+                      >
+                        {% if print_type.sizes_style.value != 'Circle' %}
+                          <img
+                            src="{{ variant.image | img_url:'master' }}"
+                            alt="{{ variant.title }}"
+                            class="print_style__image"
+                            height="{{ variant.image.height }}px"
+                            width="{{ variant.image.width }}px"
+                          >
+                          <div class="name">{{ variant.title }}</div>
+                        {% else %}
+                          <div class="print-variant__colors-name">{{ forloop.index }}</div>
+                        {% endif %}
+                      </label>
+                    </div>
+                    {% unless print_type.sizes_style.value == 'Circle' %}
+                      <div class="price">{{ variant.price | money }}</div>
+                    {% endunless %}
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
